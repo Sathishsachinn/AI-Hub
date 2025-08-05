@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Tools Hub</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+<!-- Header -->
+  <header class="header">
+    <div class="left-section">
+      <button id="menu-toggle">&#9776;</button>
+    </div>
+
+    <div class="logo">AI HUB</div>
+
+    <div class="right-section">
+      <button id="theme-toggle">🌗</button>
+    </div>
+  </header>
+
+<!-- Sidebar Menu -->
+<nav id="side-menu" class="side-menu">
+    <ul>
+      <li><a href="#" data-category="all">All</a></li>
+      <li><a href="#" data-category="writing">Chat Bot</a></li>
+      <li><a href="#" data-category="image">Image AI</a></li>
+      <li><a href="#" data-category="video">Video AI</a></li>
+      <li><a href="#" data-category="voice">Voice AI</a></li>
+      <li><a href="#" data-category="coding">Coding AI</a></li>
+      <li><a href="#" data-category="gaming">Gaming AI</a></li>
+      <li><a href="#" data-category="devotional">Devotional</a></li>
+      <li><a href="#" data-category="productivity">Productivity</a></li>
+      <li><a href="#" data-category="editing">Editing AI</a></li>
+      <li><a href="#" data-category="automation">Automation AI</a></li>
+      <li><a href="#" data-category="portfolio">portfolio AI</a></li>
+      <li><a href="#" data-category="cloning">Cloning AI</a></li>
+      <li><a href="#" data-category="misc">Miscellaneous</a></li>
+    </ul>
+</nav>
+
+<!-- Main Content -->
+<main id="main-content" class="main">
+
+<!-- Search Bar -->
+    <div class="search-container">
+      <input type="text" id="searchInput" placeholder="Search AI Tools..." />
+    </div>
+
+<!-- Cards -->
+<div id="cards" class="card-container">
+
+<!--productivity-->
+      <div class="card" data-category="productivity">
+        <h3>Grammarly</h3>
+        <p>AI writing assistant</p>
+        <a href="https://grammarly.com" target="_blank">Visit</a>
+    </div>
+    <div class="card" data-category="productivity">
+        <h3>Vmake</h3>
+        <p>Watermark Remove</p>
+        <a href="https://Vmake.ai/" target="_blank">Visit</a>
+    </div>
+    <div class="card" data-category="productivity">
+        <h3>ClickUp AI</h3>
+        <p>AI-enhanced task and project management.</p>
+        <a href="https://clickup.com/ai" target="_blank">Visit</a>
+    </div>
+    <div class="card" data-category="productivity">
+        <h3>Clockwise</h3>
+        <p>AI-powered calendar optimization.</p>
+        <a href="https://www.getclockwise.com" target="_blank">Visit</a>
+    </div>
+
+<!--gaming ai-->
+  <div class="card" data-category="gaming">
+    <h3>Scenario</h3>
+    <p>AI platform to create immersive gaming worlds.</p>
+    <a href="https://www.Scenario.gg/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="gaming">
+    <h3>Latitude Voyage</h3>
+    <p>AI-generated text-based adventure games.</p>
+    <a href="https://Voyage.latitude/" target="_blank">Visit</a>
+  </div>
+
+<!--devotional Ai-->
+  <div class="card" data-category="devotional">
+    <h3>GitaGPT</h3>
+    <p>Unlocking life's mysteries with lord <strong>KRISHNA</strong></p>
+    <a href="https://gitagpt.org" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="devotional">
+    <h3>Getfreegeeta</h3>
+    <p>Get Free Bhagavad Geeta Book</p>
+    <a href="https://yatharageeta.com" target="_blank">Visit</a>
+</div>
+
+  <div class="card" data-category="devotional">
+    <h3>Pray.com AI</h3>
+    <p>AI daily prayers, meditations, and bible studies.</p>
+    <a href="https://www.Pray.com/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="devotional">
+    <h3>Bible AI</h3>
+    <p>Ask bible questions and get AI-powered answers.</p>
+    <a href="https://bibleai.com/" target="_blank">Visit</a>
+  </div>
+
+<!--build Portfolio-->
+  <div class="card" data-category="portfolio">
+    <h3>Carbonmade</h3>
+    <p>showcase your work and professional designs</p>
+    <a href="" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="portfolio">
+    <h3>Journo Portfolio</h3>
+    <p>perfect for writers and journalists to highlight articles and stories</p>
+    <a href="" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="portfolio"> 
+    <h3>Coroflot</h3>
+    <p>Creative projects and get noticed</p>
+    <a href="" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="portfolio">
+    <h3>Portfoliobox</h3>
+    <p>Versatile platform to create personalized Portfolio</p>
+    <a href="" target="_blank">Visit</a>
+</div>
+
+<!--editing ai-->
+  <div class="card" data-category="editing">
+    <h3>Cleanup.pictures</h3>
+    <p>Remove objects, defects, watermarks using AI.</p>
+    <a href="https://Cleanup.pictures/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="editing">
+    <h3>Pixelcut</h3>
+    <p>Instant background remover and photo editing AI.</p>
+    <a href="https://pixelcut.ai/" target="_blank">Visit</a>
+  </div>
+
+<!--automation-->
+  <div class="card" data-category="automation">
+    <h3>Zapier AI</h3>
+    <p>Automate tasks between your favorite apps using AI.</p>
+    <a href="https://Zapier.com/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="automation">
+    <h3>Make.com</h3>
+    <p>Visual platform for building workflows with AI bots.</p>
+    <a href="https://www.make.com/en/ai/" target="_blank">Visit</a>
+  </div>
+
+<!--cloning ai-->
+  <div class="card" data-category="cloning">
+    <h3>HeyGen</h3>
+    <p>AI avatar creation for cloning faces and voices.</p>
+    <a href="https://www.Scenario.gg/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="cloning">
+    <h3>Altered</h3>
+    <p>Voice changing and cloning plotform for creators.</p>
+    <a href="https://www.altered.ai/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="cloning">
+    <h3>10Web</h3>
+    <p>AI website builder</p>
+    <a href="https://10web.io" target="_blank">Visit</a>
+</div>
+
+<div class="card" data-category="cloning" >
+    <h3>Hostinger AI</h3>
+    <p>AI website creator</p>
+    <a href="https://hostinger.com" target="_blank">Visit</a>
+</div>
+
+<!-- Writing AI -->
+  <div class="card" data-category="writing">
+    <h3>ChatGPT</h3>
+    <p>Conversations, writing help, coding assistant, and more.</p>
+    <a href="https://chat.openai.com/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="writing">
+    <h3>Grok</h3>
+    <p>AI assistant by xAI</p>
+    <a href="https://xai.com" target="_blank">Visit</a>
+</div>
+  
+  <div class="card" data-category="writing">
+    <h3>Copy.ai</h3>
+    <p>Create marketing copy, blogs, emails faster with AI.</p>
+    <a href="https://copy.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="writing">
+    <h3>Jasper</h3>
+    <p>AI writer for marketing content and blogs.</p>
+    <a href="https://www.jasper.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="writing">
+    <h3>Writesonic</h3>
+    <p>Content generation AI for ads, blogs, websites.</p>
+    <a href="https://writesonic.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="writing">
+    <h3>Sudowrite</h3>
+    <p>Creative writing companion powered by AI.</p>
+    <a href="https://www.sudowrite.com/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="Writing">
+    <h3>Chatbase</h3>
+    <p>Build custom AI chatbots with your data.</p>
+    <a href="https://www.chatbase.co" target="_blank">Visit</a>
+</div>
+  
+<!-- Image AI -->
+  <div class="card" data-category="image">
+    <h3>Midjourney</h3>
+    <p>AI for stunning, creative image generation.</p>
+    <a href="https://midjourney.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="image">
+    <h3>DALL·E 3</h3>
+    <p>OpenAI’s AI to generate images from text prompts.</p>
+    <a href="https://openai.com/dall-e" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="image">
+    <h3>RunwayML</h3>
+    <p>AI for video, images, and media creation tools.</p>
+    <a href="https://runwayml.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="image">
+    <h3>Stable Diffusion</h3>
+    <p>Open-source AI image generation model.</p>
+    <a href="https://stability.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="image">
+    <h3>Remini</h3>
+    <p>Enhance and restore old blurry photos using AI.</p>
+    <a href="https://reminiapp.com/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="image">
+    <h3>Blackbox AI</h3>
+    <p>Solve problems and Generate Images</p>
+    <a href="https://blackbox.ai/" target="_blank">Visit</a>
+</div>
+
+<div class="card" data-category="image">
+  <h3>Dreamina AI</h3>
+  <p> Create custom designs for a variety of uses such as Character design</p>
+  <a href="https://Dreamina.capcut.com" target="_blank">Visit</a>
+</div>
+  
+<!-- Video AI -->
+  <div class="card" data-category="video">
+    <h3>Pictory</h3>
+    <p>Turn scripts or blog posts into videos using AI.</p>
+    <a href="https://pictory.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="video">
+    <h3>Synthesia</h3>
+    <p>Create AI videos with avatars without cameras or actors.</p>
+    <a href="https://www.synthesia.io/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="video">
+    <h3>Runway Gen-2</h3>
+    <p>Text to video generation using AI power.</p>
+    <a href="https://runwayml.com/ai-tools/gen-2" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="video">
+    <h3>Fliki</h3>
+    <p>Convert text into videos with realistic AI voices.</p>
+    <a href="https://fliki.ai/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="video">
+    <h3>Hosthot</h3>
+    <p>Video model editing</p>
+    <a href="https://hosthot.co" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="video">
+    <h3>Klingai</h3>
+    <p>Video generation tool</p>
+    <a href="https://Klingai.com/" target="_blank">Visit</a>
+</div>
+  
+<!-- Voice AI -->
+  <div class="card" data-category="voice">
+    <h3>ElevenLabs</h3>
+    <p>Realistic voice generation and text-to-speech AI.</p>
+    <a href="https://elevenlabs.io/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="voice">
+    <h3>Descript</h3>
+    <p>Voice cloning, podcast editing and audio AI tool.</p>
+    <a href="https://www.descript.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="voice">
+    <h3>Murf.ai</h3>
+    <p>Voiceover generator for videos, ads, and eLearning.</p>
+    <a href="https://murf.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="voice">
+    <h3>Play.ht</h3>
+    <p>AI Text to speech with humanlike voices.</p>
+    <a href="https://play.ht/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="audio">
+    <h3>Fish.audio</h3>
+    <p>Voice clone AI</p>
+    <a href="https://fish.audio.com" target="_blank">Visit</a>
+</div>
+  
+<!-- Coding AI -->
+  <div class="card" data-category="coding">
+    <h3>GitHub Copilot</h3>
+    <p>AI tool that suggests code as you type.</p>
+    <a href="https://github.com/features/copilot" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="coding">
+    <h3>Tabnine</h3>
+    <p>AI code completions and suggestions for developers.</p>
+    <a href="https://www.tabnine.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="coding">
+    <h3>Replit Ghostwriter</h3>
+    <p>Code generation and error explanation inside Replit IDE.</p>
+    <a href="https://replit.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="coding">
+    <h3>Amazon CodeWhisperer</h3>
+    <p>Machine learning-powered coding assistant.</p>
+    <a href="https://aws.amazon.com/codewhisperer/" target="_blank">Visit</a>
+  </div>
+
+  <div class="card" data-category="coding">
+    <h3>Lovable</h3>
+    <p>Idea to app in seconds</p>
+    <a href="https://Lovable.dev/" target="_blank">Visit</a>
+</div>
+
+<div class="card" data-category="coding">
+  <h3>Innove.ai</h3>
+  <p>AI Website Builder</p>
+  <a href="https://innove.ai/" target="_blank">Visit</a>
+</div>
+
+<div class="card" data-category="coding">
+  <h3>DeepCode</h3>
+  <p>AI-driven code analysis tool.</p>
+  <a href="https://www.deepcode.ai" target="_blank">Visit</a>
+</div>
+  
+<!-- Marketing AI -->
+  <div class="card" data-category="marketing">
+    <h3>Ocoya</h3>
+    <p>Social media content creation with AI automation.</p>
+    <a href="https://www.ocoya.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="marketing">
+    <h3>AdCreative.ai</h3>
+    <p>Generate ad creatives using artificial intelligence.</p>
+    <a href="https://www.adcreative.ai/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Research AI -->
+  <div class="card" data-category="research">
+    <h3>Elicit</h3>
+    <p>AI research assistant for academic papers and research.</p>
+    <a href="https://elicit.org/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="research">
+    <h3>Scite</h3>
+    <p>AI that shows how scientific articles cite each other.</p>
+    <a href="https://scite.ai/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Music AI -->
+  <div class="card" data-category="music">
+    <h3>Soundraw</h3>
+    <p>AI music generator for creators and businesses.</p>
+    <a href="https://soundraw.io/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="music">
+    <h3>AIVA</h3>
+    <p>AI composer for soundtracks and music production.</p>
+    <a href="https://www.aiva.ai/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Design AI -->
+  <div class="card" data-category="design">
+    <h3>Canva Magic Design</h3>
+    <p>Design suggestion tool based on your content using AI.</p>
+    <a href="https://www.canva.com/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="design">
+    <h3>Looka</h3>
+    <p>Create a logo using AI-powered generator easily.</p>
+    <a href="https://looka.com/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Productivity AI -->
+  <div class="card" data-category="productivity">
+    <h3>Notion AI</h3>
+    <p>AI inside Notion to speed up writing and organizing notes.</p>
+    <a href="https://www.notion.so/product/ai" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="productivity">
+    <h3>Mem.ai</h3>
+    <p>Smart note-taking app that automatically organizes ideas.</p>
+    <a href="https://mem.ai/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Healthcare AI -->
+  <div class="card" data-category="healthcare">
+    <h3>DeepMind Health</h3>
+    <p>Research AI for healthcare innovations and diagnosis tools.</p>
+    <a href="https://deepmind.com/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Search AI -->
+  <div class="card" data-category="search">
+    <h3>Perplexity AI</h3>
+    <p>AI search engine that explains answers with sources.</p>
+    <a href="https://www.perplexity.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="search">
+    <h3>Andi</h3>
+    <p>Conversational search engine using AI.</p>
+    <a href="https://andisearch.com/" target="_blank">Visit</a>
+  </div>
+  
+<!-- Chatbot -->
+  <div class="card" data-category="chatbot">
+    <h3>Claude AI</h3>
+    <p>Anthropic’s chatbot AI for safe and helpful answers.</p>
+    <a href="https://claude.ai/" target="_blank">Visit</a>
+  </div>
+  
+  <div class="card" data-category="chatbot">
+    <h3>Character.AI</h3>
+    <p>Create AI characters and chat with them online.</p>
+    <a href="https://beta.character.ai/" target="_blank">Visit</a>
+  </div>
+
+<!-- Miscellaneous -->
+
+<div class="card" data-category="misc">
+    <h3>Hugging Face</h3>
+    <p>AI Websites</p>
+    <a href="https://huggingface.co" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="misc">
+    <h3>AI Image Detector</h3>
+    <p>Detect AI-generated images.</p>
+    <a href="https://aiimagedetector.com" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="misc">
+    <h3>Ada</h3>
+    <p>AI virtual assistant for customer support.</p>
+    <a href="https://www.ada.cx" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="misc">
+    <h3>Beautiful.ai</h3>
+    <p>AI-powered presentation design tool.</p>
+    <a href="https://www.beautiful.ai" target="_blank">Visit</a>
+</div>
+<div class="card" data-category="misc">
+    <h3>Decopy</h3>
+    <p>AI tool to detect AI-generated content.</p>
+    <a href="https://decopy.ai" target="_blank">Visit</a>
+</div>
+
+    </div>
+
+  </main>
+
+<!-- Scroll to Top Button -->
+  <button id="scrollTopBtn">↑</button>
+
+<!-- Footer -->
+  <footer style="background-color: #0f0f0f; color: white; padding: 20px;
+  text-align: center; font-size: 14px; position: fixed; bottom: 0; width: 100%;"  >
+    <div style="margin-bottom: 10px;">
+      <a href="about.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">About</a>
+      <a href="contact.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">Contact</a>
+      <a href="privacy-policy.html" style="color: #bbb; margin: 0 10px; text-decoration: none;">Privacy Policy</a>
+    </div>
+   <!--  -- <div style="margin-bottom: 10px;">
+         <a href="https://facebook.com" target="_blank" style="color: #bbb; margin: 0 8px;">
+          <i class="fab fa-facebook"></i>Facebook</a>
+          <a href="https://linkedin.com" target="_blank" style="color: #bbb; margin: 0 8px;">
+            <i class="fab fa-linkedin"></i>Linkedin</a>
+          <a href="mailto:regullasthish@gmail.com" target="_blank" style="color: #bbb; margin: 0 8px;">
+              <i class="fab fa-envelope"></i>Facebook</a>
+    </div> -->
+    <div class="footer-notice" style="color: gray; font-size: 12px;">© 2025 AI Tools Hub | All rights reserved.</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
