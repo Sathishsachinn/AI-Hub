@@ -3,74 +3,55 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Privacy Policy - AI Tools Hub</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Privacy Policy – AI Tools Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-  <style>
-    body { background: #121212; color: #eee; font-family: Arial, sans-serif; margin: 0; }
-    header { padding: 20px; text-align: center; background: #1e1e1e; }
-    .content { padding: 20px; max-width: 800px; margin: auto; }
-    footer { background-color: #111; color: white; padding: 20px; position: fixed; bottom: 0; width: 100%; text-align: center; font-size: 14px; }
-    footer a { color: #bbb; margin: 0 8px; text-decoration: none; }
-    .bottom-back-btn {
-      position: fixed;
-      left: 20px;
-      bottom: 100px;
-      background: #333334;
-      color: white;
-      border: none;
-      padding: 8px 15px;
-      border-radius: 5px;
-      cursor: pointer;
-      text-decoration: none;
-      font-size: 14px;
-      z-index: 999;
-    }
-    .bottom-back-btn:hover {
-      background: #2b2b2b;
-    }
-
-    /* Responsive Design */
-    @media (max-width: 600px) {
-      .back-btn, .bottom-back-btn {
-        padding: 6px 12px;
-        font-size: 12px;
-      }
-      .bottom-back-btn {
-        bottom: 80px;
-      }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header>
-  <h1>Privacy Policy</h1>
+<header class="header">
+  <div class="left-section">
+    <a href="index.html" style="text-decoration:none;">
+      <button style="background:var(--surface);border:1px solid var(--border);color:var(--text);width:38px;height:38px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;">
+        <i class="fas fa-arrow-left"></i>
+      </button>
+    </a>
+  </div>
+  <div class="logo"><span class="logo-ai">AI</span> Tools Hub</div>
+  <div class="right-section">
+    <button id="theme-toggle"><i class="fas fa-circle-half-stroke"></i></button>
+  </div>
 </header>
 
-<section class="content">
+<div class="page-header">
+  <h1>Privacy <span class="gradient-text">Policy</span></h1>
+</div>
+
+<section class="page-content">
   <h2>Protecting Your Information</h2>
-  <br>
-  <p>&nbsp; &nbsp;Your privacy is important to us. We only collect personal information when necessary and use it solely for improving your experience on our site.</p>
-  <br>
-  <p>&nbsp; &nbsp;We ensure that your data is protected and never shared with third parties without your explicit consent.</p>
-  <br>
-  <p>&nbsp; &nbsp;For any concerns regarding your data or this privacy policy, please contact us through our <a href="contact.html" style="color: #0077ff;">Contact Page</a>.</p>
+  <p>Your privacy is important to us. We only collect personal information when necessary and use it solely for improving your experience on our site.</p>
+  <p>We ensure that your data is protected and never shared with third parties without your explicit consent.</p>
+  <p>For any concerns regarding your data or this privacy policy, please reach out through our <a href="contact.html" style="color:var(--accent);text-decoration:none;font-weight:500;">Contact Page</a>.</p>
 </section>
 
-<a href="index.html" class="bottom-back-btn">← Home</a>
-
-<footer>
-  <div>
-    <a href="about.html">About</a> |
-    <a href="contact.html">Contact</a> |
+<footer class="footer">
+  <div class="footer-links">
+    <a href="about.html">About</a><span class="sep">|</span>
+    <a href="contact.html">Contact</a><span class="sep">|</span>
     <a href="privacy-policy.html">Privacy Policy</a>
   </div>
-  
-  <div style="color: grey; font-size: 12px; margin-top:10px;">
-    &copy; 2025 AI Tools Hub. All rights reserved.
-  </div>
+  <div class="footer-notice">© 2025 AI Tools Hub · All rights reserved.</div>
 </footer>
 
+<script>
+  const t = document.getElementById('theme-toggle');
+  t.addEventListener('click', () => {
+    document.body.classList.toggle('light-theme');
+    localStorage.setItem('aihub_theme', document.body.classList.contains('light-theme') ? 'light' : 'dark');
+  });
+  if (localStorage.getItem('aihub_theme') === 'light') document.body.classList.add('light-theme');
+</script>
 </body>
 </html>
