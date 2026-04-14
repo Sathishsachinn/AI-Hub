@@ -113,7 +113,16 @@ const tools = [
   { name: "Cline", desc: "Emerging AI coding agent for workflows.", url: "https://cline.ai", category: "coding", pricing: "free", tags: ["agent", "cli"], isNew: true, isTrending: true },
   { name: "Aider", desc: "Terminal-based AI pair programmer for git workflows.", url: "https://aider.chat", category: "coding", pricing: "free", tags: ["terminal", "git"], isNew: false, isTrending: false },
   { name: "Manus", desc: "AI for full-stack mobile/web apps with 4000+ integrations.", url: "https://manus.im", category: "coding", pricing: "paid", tags: ["agent", "fullstack"], isNew: true, isTrending: false },
-  { name: "WordLift", desc: "AI for SEO and structured content on websites.", url: "https://wordlift.io", category: "automation", pricing: "paid", tags: ["seo", "content"], isNew: false, isTrending: false }
+  { name: "WordLift", desc: "AI for SEO and structured content on websites.", url: "https://wordlift.io", category: "automation", pricing: "paid", tags: ["seo", "content"], isNew: false, isTrending: false },
+
+  // Learn Coding
+  { name: "CodeCombat", desc: "Learn to code by playing a game.", url: "https://codecombat.com", category: "learn_coding", pricing: "freemium", tags: ["game", "learning"], isNew: false, isTrending: false },
+  { name: "CodePip", desc: "Learn HTML, CSS, and JS through games.", url: "https://codepip.com", category: "learn_coding", pricing: "freemium", tags: ["css", "html", "game"], isNew: false, isTrending: false },
+  { name: "Oh My Git!", desc: "An open source game about learning Git.", url: "https://ohmygit.org", category: "learn_coding", pricing: "free", tags: ["git", "game", "open-source"], isNew: false, isTrending: false },
+  { name: "OverTheWire", desc: "Learn security concepts through war games.", url: "https://overthewire.org", category: "learn_coding", pricing: "free", tags: ["security", "linux", "game"], isNew: false, isTrending: false },
+  { name: "DevOps Games", desc: "Games exploring DevOps concepts.", url: "https://devops.games", category: "learn_coding", pricing: "free", tags: ["devops", "game"], isNew: false, isTrending: false },
+  { name: "K8s Games", desc: "Learn Kubernetes through gaming.", url: "https://k8sgames.com", category: "learn_coding", pricing: "free", tags: ["kubernetes", "game"], isNew: false, isTrending: false },
+  { name: "PicoCTF", desc: "A free computer security education program with original content built on a capture-the-flag framework.", url: "https://picoctf.org", category: "learn_coding", pricing: "free", tags: ["security", "ctf", "learning"], isNew: false, isTrending: false }
 ];
 
 // ═══════════════════════════════════════════
@@ -222,7 +231,8 @@ function renderCards() {
     productivity: 'Productivity', editing: 'Editing AI', automation: 'Automation',
     portfolio: 'Portfolio AI', cloning: 'Cloning AI', misc: 'Miscellaneous',
     programming: 'Programming', design: 'Design', marketing: 'Marketing',
-    jobs: 'Jobs & Career', self_improvement: 'Self Improvement', finance: 'Finance & Money'
+    jobs: 'Jobs & Career', self_improvement: 'Self Improvement', finance: 'Finance & Money',
+    learn_coding: 'Learn Coding'
   };
   
   const categoryOrder = Object.keys(catNames);
@@ -381,7 +391,7 @@ function getCategoryIcon(cat) {
     writing: '💬', image: '🖼️', video: '🎬', voice: '🎙️',
     coding: '💻', gaming: '🎮', devotional: '🙏', productivity: '⚡',
     editing: '✨', automation: '🤖', portfolio: '💼', cloning: '👤',
-    misc: '🔮'
+    misc: '🔮', learn_coding: '🧑‍💻'
   };
   return icons[cat] || '🤖';
 }
@@ -570,7 +580,7 @@ function openModal(toolName) {
   document.getElementById('modal-badges').innerHTML = pricingBadgeHTML(tool.pricing) + statusBadgeHTML(tool);
   document.getElementById('modal-desc').textContent = tool.desc;
 
-  const catNames = { writing: 'Writing', image: 'Image Gen', video: 'Video Gen', voice: 'Voice', coding: 'Coding', gaming: 'Gaming', devotional: 'Devotional', productivity: 'Productivity', editing: 'Editing', automation: 'Automation', portfolio: 'Portfolio', cloning: 'Cloning', misc: 'Misc' };
+  const catNames = { writing: 'Writing', image: 'Image Gen', video: 'Video Gen', voice: 'Voice', coding: 'Coding', gaming: 'Gaming', devotional: 'Devotional', productivity: 'Productivity', editing: 'Editing', automation: 'Automation', portfolio: 'Portfolio', cloning: 'Cloning', misc: 'Misc', programming: 'Programming', design: 'Design', marketing: 'Marketing', jobs: 'Jobs & Career', self_improvement: 'Self Improvement', finance: 'Finance & Money', learn_coding: 'Learn Coding' };
   document.getElementById('modal-category').textContent = catNames[tool.category] || tool.category;
 
   const priceMap = { free: 'Free', freemium: 'Freemium', paid: 'Paid' };
