@@ -20,6 +20,32 @@ if (localStorage.getItem('aihub_theme') === 'light') {
   document.body.classList.add('light-theme');
 }
 
+// Toggle Password Visibility
+const togglePassword = document.getElementById('toggle-password');
+const passwordInput = document.getElementById('password');
+
+if (togglePassword && passwordInput) {
+  // Show/hide icon depending on whether there is text inside
+  passwordInput.addEventListener('input', () => {
+    if (passwordInput.value.length > 0) {
+      togglePassword.style.display = 'block';
+    } else {
+      togglePassword.style.display = 'none';
+      // Reset type back to password when emptied, for safety
+      passwordInput.setAttribute('type', 'password');
+      togglePassword.classList.remove('fa-eye-slash');
+      togglePassword.classList.add('fa-eye');
+    }
+  });
+
+  togglePassword.addEventListener('click', () => {
+    const type = passwordInput.getAttribute('type') === 'password' ? 'text' : 'password';
+    passwordInput.setAttribute('type', type);
+    togglePassword.classList.toggle('fa-eye');
+    togglePassword.classList.toggle('fa-eye-slash');
+  });
+}
+
 // Forgot Password / Sign Up / Social Hooks
 const forgotPwLink = document.getElementById('forgot-pw-link');
 if (forgotPwLink) {

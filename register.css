@@ -189,3 +189,19 @@
 }
 .divider::before { margin-right: 1em; }
 .divider::after { margin-left: 1em; }
+
+@media (max-width: 640px) {
+  .register-wrapper {
+    padding: 1.2rem;
+  }
+  .register-container {
+    padding: 1.8rem 1.2rem;
+  }
+  .register-header h1 {
+    font-size: 1.6rem;
+  }
+  .social-register {
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+}

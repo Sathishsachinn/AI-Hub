@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Submit a Tool - AI Tools Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="register.css">
+</head>
+
+<body>
+
+  <header class="header">
+    <div class="left-section">
+      <a href="index.html" style="text-decoration:none;">
+        <button
+          style="background:var(--surface);border:1px solid var(--border);color:var(--text);width:38px;height:38px;border-radius:8px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all 0.2s;">
+          <i class="fas fa-arrow-left"></i>
+        </button>
+      </a>
+    </div>
+    <div class="logo"><span class="logo-ai">AI</span> Tools Hub</div>
+    <div class="right-section">
+      <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-circle-half-stroke"></i></button>
+    </div>
+  </header>
+
+  <main class="register-wrapper">
+    <div class="register-container" style="max-width: 600px;">
+      <div class="register-content">
+        <div class="register-header">
+          <h1>Submit a <span class="gradient-text">Tool</span></h1>
+          <p>Know an amazing AI tool? Suggest it below to be featured on the hub.</p>
+        </div>
+
+        <form id="submit-form" action="#" method="POST">
+          <div class="form-group">
+            <label for="tool-name">Tool Name</label>
+            <div class="input-wrapper">
+              <i class="fas fa-cube"></i>
+              <input type="text" id="tool-name" placeholder="e.g. ChatGPT" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tool-url">Website URL</label>
+            <div class="input-wrapper">
+              <i class="fas fa-link"></i>
+              <input type="url" id="tool-url" placeholder="https://example.ai" required>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="tool-desc">Description (max 100 characters)</label>
+            <div class="input-wrapper">
+              <i class="fas fa-align-left" style="top: 1.2rem; transform: none;"></i>
+              <textarea id="tool-desc" placeholder="What does this tool do?" rows="3" required style="width: 100%; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); padding: 0.8rem 1rem 0.8rem 2.8rem; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; resize: none;"></textarea>
+            </div>
+          </div>
+
+          <div class="form-group" style="display: flex; gap: 1rem;">
+            <div style="flex: 1;">
+              <label for="tool-category">Category</label>
+              <div class="input-wrapper">
+                <i class="fas fa-list"></i>
+                <select id="tool-category" required style="width: 100%; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); padding: 0.8rem 1rem 0.8rem 2.8rem; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; appearance: none; cursor: pointer;">
+                  <option value="" disabled selected>Select category...</option>
+                  <option value="writing">Chat / Writing</option>
+                  <option value="image">Image Generation</option>
+                  <option value="video">Video Generation</option>
+                  <option value="coding">Coding / Dev</option>
+                  <option value="ui">UI Generation (Template)</option>
+                  <option value="frontend">App Builder (Template)</option>
+                  <option value="misc">Miscellaneous</option>
+                </select>
+                <i class="fas fa-chevron-down" style="position: absolute; right: 1rem; left: auto; opacity: 0.5; pointer-events: none;"></i>
+              </div>
+            </div>
+            
+            <div style="flex: 1;">
+              <label for="tool-pricing">Pricing</label>
+              <div class="input-wrapper">
+                <i class="fas fa-tag"></i>
+                <select id="tool-pricing" required style="width: 100%; background: var(--bg3); border: 1px solid var(--border); border-radius: var(--radius-sm); color: var(--text); padding: 0.8rem 1rem 0.8rem 2.8rem; font-family: var(--font-body); font-size: 0.95rem; outline: none; transition: border-color 0.2s, box-shadow 0.2s; -webkit-appearance: none; appearance: none; cursor: pointer;">
+                  <option value="" disabled selected>Pricing model...</option>
+                  <option value="free">Free</option>
+                  <option value="freemium">Freemium</option>
+                  <option value="paid">Paid</option>
+                </select>
+                <i class="fas fa-chevron-down" style="position: absolute; right: 1rem; left: auto; opacity: 0.5; pointer-events: none;"></i>
+              </div>
+            </div>
+          </div>
+
+          <button type="submit" class="submit-btn" style="margin-top: 1rem;">Submit for Review <i class="fas fa-paper-plane"></i></button>
+        </form>
+
+      </div>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <script src="submit.js"></script>
+</body>
+
+</html>

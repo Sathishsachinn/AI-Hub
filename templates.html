@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AI Templates Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@400;600;700;800&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css" />
+  <script>
+    if (!localStorage.getItem('aihub_user')) {
+      window.location.replace('login.html');
+    }
+  </script>
+  <!-- SortableJS for Drag-and-Drop Favorites -->
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+</head>
+<body>
+
+<!-- Sidebar -->
+<nav id="side-menu" class="side-menu">
+  <div class="side-menu-header">
+    <span class="side-logo">⚡ Templates</span>
+  </div>
+  <ul>
+    <li><a href="index.html" class="nav-page-link"><i class="fas fa-arrow-left"></i> Back to Tools</a></li>
+    <li><a href="#" data-category="all" class="active"><i class="fas fa-border-all"></i> All Templates</a></li>
+    <li><a href="#" data-category="ui"><i class="fas fa-layer-group"></i> UI Components</a></li>
+    <li><a href="#" data-category="frontend"><i class="fas fa-desktop"></i> Frontend Templates</a></li>
+    <li><a href="#" data-category="backend"><i class="fas fa-server"></i> Backend Boilerplates</a></li>
+    <li><a href="#" data-category="database"><i class="fas fa-database"></i> Database schemas</a></li>
+    <li><a href="#" data-category="automation"><i class="fas fa-cogs"></i> Automation</a></li>
+    <li><a href="#" data-category="misc"><i class="fas fa-cube"></i> Miscellaneous</a></li>
+    <li><a href="#" data-category="favorites" id="fav-link"><i class="fas fa-heart"></i> Favorites <span id="fav-count" class="fav-badge">0</span></a></li>
+    <li style="margin-top: 1rem;"><a href="submit.html" class="nav-page-link" style="color: var(--accent);"><i class="fas fa-plus-circle"></i> Submit a Tool</a></li>
+  </ul>
+
+  <div class="side-menu-footer">
+    <div id="nav-auth-links">
+      <a href="login.html" class="side-btn auth-login-btn"><i class="fas fa-sign-in-alt"></i> Login</a>
+      <a href="register.html" class="side-btn auth-register-btn">Sign Up</a>
+    </div>
+    <div id="nav-logout" style="display: none;">
+      <a href="#" id="side-logout-btn" class="side-btn auth-logout-btn"><i class="fas fa-sign-out-alt"></i> Logout</a>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="header">
+  <div class="left-section">
+    <button id="menu-toggle" aria-label="Toggle menu"><i class="fas fa-bars"></i></button>
+  </div>
+  <div class="logo"><span class="logo-ai">AI</span> Templates Hub</div>
+  <div class="right-section">
+    <a href="index.html" class="header-link-btn" title="AI Tools">
+      <i class="fas fa-cube"></i>
+    </a>
+    <button id="theme-toggle" aria-label="Toggle theme"><i class="fas fa-circle-half-stroke"></i></button>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main id="main-content" class="main">
+
+  <!-- Hero -->
+  <div class="hero">
+    <p class="hero-sub">Discover · Build · Ship</p>
+    <h1 class="hero-title">The Best <span class="gradient-text">AI Templates</span><br>For Development</h1>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" id="searchInput" placeholder="Search templates, categories, tags…" />
+      <span id="clear-search" class="clear-search" title="Clear"><i class="fas fa-times"></i></span>
+    </div>
+  </div>
+
+  <!-- Filter Bar -->
+  <div class="filter-bar">
+    <div class="filter-left">
+      <span class="filter-label">Price:</span>
+      <button class="filter-chip active" data-price="all">All</button>
+      <button class="filter-chip" data-price="free"><span class="dot free"></span>Free</button>
+      <button class="filter-chip" data-price="freemium"><span class="dot freemium"></span>Freemium</button>
+      <button class="filter-chip" data-price="paid"><span class="dot paid"></span>Paid</button>
+    </div>
+    <div class="filter-right">
+      <span class="filter-label">Sort:</span>
+      <select id="sortSelect">
+        <option value="default">Default</option>
+        <option value="az">A → Z</option>
+        <option value="za">Z → A</option>
+        <option value="rating">Top Rated</option>
+        <option value="newest">Newest</option>
+      </select>
+    </div>
+  </div>
+
+  <!-- Result Count -->
+  <div class="result-bar">
+    <span id="result-count">Loading…</span>
+    <span id="active-tag-label"></span>
+  </div>
+
+  <!-- Cards -->
+  <div id="cards" class="card-container"></div>
+
+  <!-- No Results -->
+  <div id="no-results" class="no-results" style="display:none;">
+    <i class="fas fa-satellite-dish"></i>
+    <p>No tools found. Try a different search or filter.</p>
+  </div>
+
+</main>
+
+<!-- Scroll Top -->
+<button id="scrollTopBtn" aria-label="Scroll to top"><i class="fas fa-arrow-up"></i></button>
+
+<!-- Toast -->
+<div id="toast" class="toast"></div>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-links">
+    <a href="about.html">About</a>
+    <span class="sep">|</span>
+    <a href="contact.html">Contact</a>
+    <span class="sep">|</span>
+    <a href="privacy-policy.html">Privacy Policy</a>
+  </div>
+  <div class="footer-notice">© 2025 AI Tools Hub · All rights reserved.</div>
+</footer>
+
+<!-- Comparison Dock -->
+<div id="compare-dock" class="compare-dock">
+  <div class="compare-info">
+    <span><strong id="compare-count">0</strong> selected to compare</span>
+    <span style="font-size: 0.75rem; color: var(--text-dim); margin-left: 0.5rem;">(Max 3)</span>
+  </div>
+  <div class="compare-actions">
+    <button id="compare-clear" class="btn-clear">Clear</button>
+    <a href="compare.html?type=templates" id="compare-go" class="btn-go">Compare <i class="fas fa-arrow-right"></i></a>
+  </div>
+</div>
+
+<!-- Tool Modal -->
+<div class="modal-overlay" id="tool-modal">
+  <div class="modal-content">
+    <button class="modal-close" id="modal-close-btn"><i class="fas fa-times"></i></button>
+    <div class="modal-header">
+      <div id="modal-icon" class="modal-icon"><i class="fas fa-cube"></i></div>
+      <div class="modal-title-group">
+        <h2 id="modal-title">Tool Name</h2>
+        <div class="modal-badges" id="modal-badges"></div>
+      </div>
+    </div>
+    <div class="modal-body">
+      <p id="modal-desc" class="modal-desc">Description goes here.</p>
+      <div class="modal-meta">
+        <div class="meta-item"><span class="meta-label">Category:</span> <span id="modal-category">AI</span></div>
+        <div class="meta-item"><span class="meta-label">Pricing:</span> <span id="modal-pricing">Free</span></div>
+        <div class="meta-item"><span class="meta-label">Rating:</span> <span class="stars" id="modal-stars"></span> <span id="modal-rating-val" class="rating-val"></span></div>
+      </div>
+      <div class="modal-tags" id="modal-tags"></div>
+    </div>
+    <div class="modal-footer">
+      <a href="#" target="_blank" id="modal-visit-btn" class="modal-visit-btn">Visit Website <i class="fas fa-external-link-alt"></i></a>
+    </div>
+  </div>
+</div>
+
+<!-- Spotlight Search -->
+<div class="spotlight-overlay" id="spotlight-overlay">
+  <div class="spotlight-container">
+    <div class="spotlight-header">
+      <i class="fas fa-search spotlight-icon"></i>
+      <input type="text" id="spotlight-input" class="spotlight-input" placeholder="Search templates or type a command..." autocomplete="off">
+      <div class="spotlight-badge">ESC to close</div>
+    </div>
+    <div class="spotlight-results" id="spotlight-results">
+      <!-- Results populated via JS -->
+    </div>
+  </div>
+</div>
+
+<!-- HubBot -->
+<div class="hubbot-container" id="hubbot-container">
+  <button class="hubbot-btn" id="hubbot-btn" aria-label="Open HubBot AI">
+    <i class="fas fa-robot"></i>
+  </button>
+  <div class="hubbot-window" id="hubbot-window">
+    <div class="hubbot-header">
+      <div class="hubbot-title"><i class="fas fa-robot" style="color: var(--accent); margin-right: 0.5rem;"></i> HubBot AI</div>
+      <button class="hubbot-close" id="hubbot-close"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="hubbot-messages" id="hubbot-messages">
+      <div class="bot-msg">Hi there! 👋 I'm HubBot. What kind of AI template are you looking for today?</div>
+    </div>
+    <div class="hubbot-input-area">
+      <input type="text" id="hubbot-input" placeholder="e.g. I need a frontend UI..." autocomplete="off">
+      <button class="hubbot-send" id="hubbot-send"><i class="fas fa-paper-plane"></i></button>
+    </div>
+  </div>
+</div>
+
+<script src="templates.js"></script>
+</body>
+</html>

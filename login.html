@@ -51,8 +51,13 @@
           <div class="form-group">
             <label for="password">Password</label>
             <div class="input-wrapper">
-              <i class="fas fa-lock"></i>
-              <input type="password" id="password" placeholder="Enter your password" required>
+              <i class="fas fa-lock"
+                style="position: absolute; left: 1rem; top: 50%; transform: translateY(-50%); color: var(--text-dim);"></i>
+              <input type="password" id="password" placeholder="Enter your password" required
+                style="padding-right: 2.5rem;">
+              <i class="fas fa-eye" id="toggle-password"
+                style="position: absolute; right: 1rem; left: auto; top: 50%; transform: translateY(-50%); cursor: pointer; color: var(--text-dim); display: none;"
+                title="Toggle Password Visibility"></i>
             </div>
           </div>
 
