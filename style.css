@@ -73,6 +73,11 @@ body {
   padding: 0 1.5rem;
   z-index: 1000;
   backdrop-filter: blur(12px);
+  pointer-events: none; /* Prevents ghost wrapping overlays on mobile */
+}
+
+.header > * {
+  pointer-events: auto; /* Restores clickability to structural children */
 }
 
 .logo {
