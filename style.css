@@ -845,7 +845,7 @@ body {
 }
 
 @media (min-width: 1200px) {
-  .card-container { grid-template-columns: repeat(6, 1fr); }
+  .card-container { grid-template-columns: repeat(5, 1fr); }
 }
 
 @media (max-width: 640px) {
