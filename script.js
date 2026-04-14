@@ -92,13 +92,13 @@ const tools = [
   { name: "Canva Magic Design", desc: "AI-powered design suggestions based on your content.", url: "https://www.canva.com/", category: "misc", pricing: "freemium", tags: ["design", "graphics"], isNew: false, isTrending: false },
   { name: "Soundraw", desc: "AI music generator for creators, ads, and businesses.", url: "https://soundraw.io/", category: "misc", pricing: "freemium", tags: ["music", "audio"], isNew: false, isTrending: false },
   { name: "Elicit", desc: "AI research assistant for academic papers and literature review.", url: "https://elicit.org/", category: "misc", pricing: "freemium", tags: ["research", "academic"], isNew: false, isTrending: false },
-  
+
   // Newly Added Tools
   { name: "Gemini", desc: "Google's most capable AI model for text, code, and multimodal tasks.", url: "https://gemini.google.com/", category: "writing", pricing: "freemium", tags: ["chat", "multimodal", "google"], isNew: true, isTrending: true },
   { name: "Llama 3", desc: "Meta's highly advanced open-source linguistic AI model.", url: "https://llama.meta.com/", category: "writing", pricing: "free", tags: ["open-source", "meta"], isNew: true, isTrending: true },
   { name: "Sora", desc: "OpenAI's groundbreaking text-to-video generation tool.", url: "https://openai.com/sora", category: "video", pricing: "paid", tags: ["video-gen", "openai"], isNew: true, isTrending: true },
   { name: "AutoGPT", desc: "Experimental open-source application showcasing autonomous AI agents.", url: "https://agpt.co/", category: "automation", pricing: "free", tags: ["agents", "autonomous", "open-source"], isNew: false, isTrending: true },
-  
+
   // More AI Coding & Automation
   { name: "Replit AI", desc: "Prompt to complete apps (frontend + backend + deploy).", url: "https://replit.com", category: "coding", pricing: "freemium", tags: ["ide", "fullstack"], isNew: false, isTrending: true },
   { name: "Cursor", desc: "AI-native code editor (VS Code fork) for full projects.", url: "https://www.cursor.com", category: "coding", pricing: "freemium", tags: ["ide", "editor"], isNew: false, isTrending: true },
@@ -113,111 +113,7 @@ const tools = [
   { name: "Cline", desc: "Emerging AI coding agent for workflows.", url: "https://cline.ai", category: "coding", pricing: "free", tags: ["agent", "cli"], isNew: true, isTrending: true },
   { name: "Aider", desc: "Terminal-based AI pair programmer for git workflows.", url: "https://aider.chat", category: "coding", pricing: "free", tags: ["terminal", "git"], isNew: false, isTrending: false },
   { name: "Manus", desc: "AI for full-stack mobile/web apps with 4000+ integrations.", url: "https://manus.im", category: "coding", pricing: "paid", tags: ["agent", "fullstack"], isNew: true, isTrending: false },
-  { name: "WordLift", desc: "AI for SEO and structured content on websites.", url: "https://wordlift.io", category: "automation", pricing: "paid", tags: ["seo", "content"], isNew: false, isTrending: false },
-
-  // PROGRAMMING
-  { name: "GitHub", desc: "Code hosting & collaboration", url: "https://github.com/", category: "programming", pricing: "freemium", tags: ["code", "hosting", "collaboration"], isNew: false, isTrending: true },
-  { name: "Stack Overflow", desc: "Developer Q&A forum", url: "https://stackoverflow.com/", category: "programming", pricing: "free", tags: ["q&a", "forum", "coding"], isNew: false, isTrending: true },
-  { name: "W3Schools", desc: "Coding tutorials & references", url: "https://www.w3schools.com/", category: "programming", pricing: "freemium", tags: ["tutorial", "learning"], isNew: false, isTrending: false },
-  { name: "freeCodeCamp", desc: "Learn coding free", url: "https://www.freecodecamp.org/", category: "programming", pricing: "free", tags: ["learning", "coding"], isNew: false, isTrending: true },
-  { name: "GeeksforGeeks", desc: "Coding practice & tutorials", url: "https://www.geeksforgeeks.org/", category: "programming", pricing: "freemium", tags: ["tutorial", "practice"], isNew: false, isTrending: false },
-  { name: "LeetCode", desc: "Coding interview prep", url: "https://leetcode.com/", category: "programming", pricing: "freemium", tags: ["interview", "practice"], isNew: false, isTrending: true },
-  { name: "HackerRank", desc: "Coding challenges & assessments", url: "https://www.hackerrank.com/", category: "programming", pricing: "freemium", tags: ["challenges", "assessment"], isNew: false, isTrending: false },
-  { name: "MDN Web Docs", desc: "Web dev documentation", url: "https://developer.mozilla.org/", category: "programming", pricing: "free", tags: ["docs", "web-dev"], isNew: false, isTrending: true },
-  { name: "CodePen", desc: "Frontend playground tool", url: "https://codepen.io/", category: "programming", pricing: "freemium", tags: ["frontend", "playground"], isNew: false, isTrending: false },
-  { name: "Replit Workspace", desc: "Online code editor", url: "https://replit.com/", category: "programming", pricing: "freemium", tags: ["editor", "ide"], isNew: false, isTrending: true },
-
-  // DESIGN
-  { name: "Figma", desc: "UI/UX design tool", url: "https://www.figma.com/", category: "design", pricing: "freemium", tags: ["ui", "ux", "design"], isNew: false, isTrending: true },
-  { name: "Canva", desc: "Easy graphic design", url: "https://www.canva.com/", category: "design", pricing: "freemium", tags: ["graphic-design", "easy"], isNew: false, isTrending: true },
-  { name: "Behance", desc: "Creative portfolio showcase", url: "https://www.behance.net/", category: "design", pricing: "free", tags: ["portfolio", "showcase"], isNew: false, isTrending: false },
-  { name: "Dribbble", desc: "Designer community platform", url: "https://dribbble.com/", category: "design", pricing: "freemium", tags: ["community", "design"], isNew: false, isTrending: false },
-  { name: "Coolors", desc: "Color palette generator", url: "https://coolors.co/", category: "design", pricing: "freemium", tags: ["colors", "palette"], isNew: false, isTrending: false },
-  { name: "Adobe XD", desc: "UI/UX prototyping tool", url: "https://helpx.adobe.com/xd/get-started.html", category: "design", pricing: "paid", tags: ["ui", "prototyping"], isNew: false, isTrending: false },
-  { name: "Unsplash", desc: "Free stock photos", url: "https://unsplash.com/", category: "design", pricing: "free", tags: ["photos", "stock"], isNew: false, isTrending: true },
-  { name: "Flaticon", desc: "Free icons library", url: "https://www.flaticon.com/", category: "design", pricing: "freemium", tags: ["icons", "library"], isNew: false, isTrending: true },
-  { name: "LottieFiles", desc: "Animated icons library", url: "https://lottiefiles.com/", category: "design", pricing: "freemium", tags: ["animation", "icons"], isNew: false, isTrending: false },
-  { name: "Remove.bg", desc: "Background remover tool", url: "https://www.remove.bg/", category: "design", pricing: "freemium", tags: ["background", "remover"], isNew: false, isTrending: true },
-
-  // MARKETING
-  { name: "HubSpot", desc: "CRM & marketing tools", url: "https://www.hubspot.com/", category: "marketing", pricing: "freemium", tags: ["crm", "marketing"], isNew: false, isTrending: true },
-  { name: "Mailchimp", desc: "Email marketing platform", url: "https://mailchimp.com/", category: "marketing", pricing: "freemium", tags: ["email", "marketing"], isNew: false, isTrending: true },
-  { name: "Buffer", desc: "Social media scheduling", url: "https://buffer.com/", category: "marketing", pricing: "freemium", tags: ["social-media", "scheduling"], isNew: false, isTrending: false },
-  { name: "Hootsuite", desc: "Social media management", url: "https://www.hootsuite.com/", category: "marketing", pricing: "paid", tags: ["social-media", "management"], isNew: false, isTrending: false },
-  { name: "Ahrefs", desc: "SEO & keyword research", url: "https://ahrefs.com/", category: "marketing", pricing: "paid", tags: ["seo", "research"], isNew: false, isTrending: true },
-  { name: "SEMrush", desc: "SEO & marketing analytics", url: "https://www.semrush.com/", category: "marketing", pricing: "paid", tags: ["seo", "analytics"], isNew: false, isTrending: true },
-  { name: "Google Analytics", desc: "Website traffic analysis", url: "https://analytics.google.com/", category: "marketing", pricing: "free", tags: ["analytics", "traffic"], isNew: false, isTrending: true },
-  { name: "Zapier", desc: "Workflow automation tool", url: "https://zapier.com/", category: "marketing", pricing: "freemium", tags: ["automation", "workflow"], isNew: false, isTrending: true },
-  { name: "Bitly", desc: "URL shortening tool", url: "https://bitly.com/", category: "marketing", pricing: "freemium", tags: ["url", "shortener"], isNew: false, isTrending: false },
-  { name: "BuzzSumo", desc: "Content research tool", url: "https://buzzsumo.com/", category: "marketing", pricing: "paid", tags: ["content", "research"], isNew: false, isTrending: false },
-
-  // JOBS & CAREER
-  { name: "LinkedIn", desc: "Professional networking platform", url: "https://www.linkedin.com/", category: "jobs", pricing: "freemium", tags: ["networking", "jobs"], isNew: false, isTrending: true },
-  { name: "Indeed", desc: "Global job listings", url: "https://www.indeed.com/", category: "jobs", pricing: "free", tags: ["jobs", "listings"], isNew: false, isTrending: true },
-  { name: "Glassdoor", desc: "Company reviews & jobs", url: "https://www.glassdoor.com/", category: "jobs", pricing: "free", tags: ["reviews", "jobs"], isNew: false, isTrending: false },
-  { name: "AngelList", desc: "Startup job opportunities", url: "https://angellist.com/", category: "jobs", pricing: "free", tags: ["startup", "jobs"], isNew: false, isTrending: false },
-  { name: "Wellfound", desc: "Remote startup jobs", url: "https://wellfound.com/", category: "jobs", pricing: "free", tags: ["remote", "startup"], isNew: false, isTrending: true },
-  { name: "Upwork", desc: "Freelance job marketplace", url: "https://www.upwork.com/", category: "jobs", pricing: "freemium", tags: ["freelance", "marketplace"], isNew: false, isTrending: true },
-  { name: "Fiverr", desc: "Freelance gig platform", url: "https://www.fiverr.com/", category: "jobs", pricing: "freemium", tags: ["freelance", "gigs"], isNew: false, isTrending: true },
-  { name: "Toptal", desc: "Elite freelancer network", url: "https://www.toptal.com/", category: "jobs", pricing: "freemium", tags: ["freelance", "elite"], isNew: false, isTrending: false },
-  { name: "RemoteOK", desc: "Remote job listings", url: "https://remoteok.com/", category: "jobs", pricing: "free", tags: ["remote", "jobs"], isNew: false, isTrending: false },
-  { name: "We Work Remotely", desc: "Remote work board", url: "https://weworkremotely.com/", category: "jobs", pricing: "free", tags: ["remote", "board"], isNew: false, isTrending: false },
-
-  // PRODUCTIVITY (New Additions)
-  { name: "Notion", desc: "Notes & project management", url: "https://www.notion.so/", category: "productivity", pricing: "freemium", tags: ["notes", "management"], isNew: false, isTrending: true },
-  { name: "Trello", desc: "Task management boards", url: "https://trello.com/", category: "productivity", pricing: "freemium", tags: ["tasks", "boards"], isNew: false, isTrending: true },
-  { name: "Asana", desc: "Team project tracking", url: "https://asana.com/", category: "productivity", pricing: "freemium", tags: ["project", "tracking"], isNew: false, isTrending: true },
-  { name: "Slack", desc: "Team communication tool", url: "https://slack.com/", category: "productivity", pricing: "freemium", tags: ["communication", "team"], isNew: false, isTrending: true },
-  { name: "ClickUp", desc: "All-in-one productivity", url: "https://clickup.com/", category: "productivity", pricing: "freemium", tags: ["productivity", "all-in-one"], isNew: false, isTrending: true },
-  { name: "Todoist", desc: "Personal task manager", url: "https://todoist.com/", category: "productivity", pricing: "freemium", tags: ["tasks", "manager"], isNew: false, isTrending: true },
-  { name: "Calendly", desc: "Schedule meetings easily", url: "https://calendly.com/", category: "productivity", pricing: "freemium", tags: ["scheduling", "meetings"], isNew: false, isTrending: true },
-  { name: "Evernote", desc: "Note-taking & organization", url: "https://evernote.com/", category: "productivity", pricing: "freemium", tags: ["notes", "organization"], isNew: false, isTrending: false },
-  { name: "RescueTime", desc: "Time tracking software", url: "https://www.rescuetime.com/", category: "productivity", pricing: "paid", tags: ["time", "tracking"], isNew: false, isTrending: false },
-  { name: "Pomofocus", desc: "Pomodoro timer tool", url: "https://pomofocus.io/", category: "productivity", pricing: "free", tags: ["timer", "pomodoro"], isNew: false, isTrending: true },
-
-  // SELF IMPROVEMENT
-  { name: "Headspace", desc: "Guided meditation app", url: "https://www.headspace.com/", category: "self_improvement", pricing: "freemium", tags: ["meditation", "guided"], isNew: false, isTrending: true },
-  { name: "Calm", desc: "Sleep & relaxation", url: "https://www.calm.com/", category: "self_improvement", pricing: "freemium", tags: ["sleep", "relaxation"], isNew: false, isTrending: true },
-  { name: "Duolingo", desc: "Language learning app", url: "https://www.duolingo.com/", category: "self_improvement", pricing: "freemium", tags: ["language", "learning"], isNew: false, isTrending: true },
-  { name: "Habitica", desc: "Gamify your habits", url: "https://habitica.com/", category: "self_improvement", pricing: "freemium", tags: ["habits", "gamify"], isNew: false, isTrending: false },
-  { name: "Coursera", desc: "Online skill courses", url: "https://www.coursera.org/", category: "self_improvement", pricing: "freemium", tags: ["courses", "skills"], isNew: false, isTrending: true },
-  { name: "Udemy", desc: "Affordable online courses", url: "https://www.udemy.com/", category: "self_improvement", pricing: "freemium", tags: ["courses", "learning"], isNew: false, isTrending: true },
-  { name: "Khan Academy", desc: "Free education platform", url: "https://www.khanacademy.org/", category: "self_improvement", pricing: "free", tags: ["education", "free"], isNew: false, isTrending: true },
-  { name: "Brilliant", desc: "Interactive learning app", url: "https://brilliant.org/", category: "self_improvement", pricing: "freemium", tags: ["interactive", "learning"], isNew: false, isTrending: false },
-  { name: "Skillshare", desc: "Creative learning courses", url: "https://www.skillshare.com/", category: "self_improvement", pricing: "freemium", tags: ["creative", "courses"], isNew: false, isTrending: false },
-  { name: "Atomic Habits Journal", desc: "Habit tracking tool", url: "https://jamesclear.com/atomic-habits", category: "self_improvement", pricing: "paid", tags: ["habits", "journal"], isNew: false, isTrending: false },
-
-  // WRITING & CONTENT (New Additions)
-  { name: "Hemingway App", desc: "Improve writing clarity", url: "https://hemingwayapp.com/", category: "writing", pricing: "free", tags: ["writing", "clarity"], isNew: false, isTrending: true },
-  { name: "QuillBot", desc: "Paraphrasing & rewriting", url: "https://quillbot.com/", category: "writing", pricing: "freemium", tags: ["paraphrasing", "rewriting"], isNew: false, isTrending: true },
-  { name: "ProWritingAid", desc: "Writing style analysis", url: "https://prowritingaid.com/", category: "writing", pricing: "freemium", tags: ["style", "analysis"], isNew: false, isTrending: false },
-  { name: "Medium", desc: "Writing & publishing platform", url: "https://medium.com/", category: "writing", pricing: "free", tags: ["writing", "publishing"], isNew: false, isTrending: true },
-  { name: "Substack", desc: "Newsletter publishing tool", url: "https://substack.com/", category: "writing", pricing: "free", tags: ["newsletter", "publishing"], isNew: false, isTrending: true },
-  { name: "Wordtune", desc: "Sentence rewriting tool", url: "https://www.wordtune.com/", category: "writing", pricing: "freemium", tags: ["rewriting", "sentences"], isNew: false, isTrending: false },
-  { name: "Paperpile", desc: "Research & citation manager", url: "https://paperpile.com/", category: "writing", pricing: "paid", tags: ["research", "citation"], isNew: false, isTrending: false },
-
-  // FINANCE & MONEY
-  { name: "PayPal", desc: "Online payment system", url: "https://www.paypal.com/", category: "finance", pricing: "free", tags: ["payment", "online"], isNew: false, isTrending: true },
-  { name: "Stripe", desc: "Online payment gateway", url: "https://stripe.com/", category: "finance", pricing: "free", tags: ["payment", "gateway"], isNew: false, isTrending: true },
-  { name: "Wise", desc: "International money transfer", url: "https://wise.com/", category: "finance", pricing: "free", tags: ["transfer", "money"], isNew: false, isTrending: true },
-  { name: "Coinbase", desc: "Buy & trade crypto", url: "https://www.coinbase.com/", category: "finance", pricing: "free", tags: ["crypto", "trading"], isNew: false, isTrending: false },
-  { name: "Robinhood", desc: "Stock & crypto trading", url: "https://robinhood.com/", category: "finance", pricing: "free", tags: ["stock", "trading"], isNew: false, isTrending: true },
-  { name: "Wealthfront", desc: "Automated investing app", url: "https://www.wealthfront.com/", category: "finance", pricing: "free", tags: ["investing", "automated"], isNew: false, isTrending: false },
-  { name: "Mint", desc: "Personal finance tracking", url: "https://mint.intuit.com/", category: "finance", pricing: "free", tags: ["finance", "tracking"], isNew: false, isTrending: false },
-  { name: "YNAB (You Need A Budget)", desc: "Budget management app", url: "https://www.ynab.com/", category: "finance", pricing: "paid", tags: ["budget", "management"], isNew: false, isTrending: true },
-  { name: "Revolut", desc: "Digital banking app", url: "https://www.revolut.com/", category: "finance", pricing: "freemium", tags: ["banking", "digital"], isNew: false, isTrending: true },
-  { name: "Plaid", desc: "Financial data API", url: "https://plaid.com/", category: "finance", pricing: "paid", tags: ["api", "financial"], isNew: false, isTrending: false },
-
-  // TOOLS & UTILITIES (New Additions)
-  { name: "TinyURL", desc: "Link shortening service", url: "https://tinyurl.com/", category: "misc", pricing: "free", tags: ["link", "shortening"], isNew: false, isTrending: false },
-  { name: "Cloudflare", desc: "Website security & CDN", url: "https://www.cloudflare.com/", category: "misc", pricing: "freemium", tags: ["security", "cdn"], isNew: false, isTrending: true },
-  { name: "Google Drive", desc: "Cloud file storage", url: "https://www.google.com/drive/", category: "productivity", pricing: "freemium", tags: ["storage", "cloud"], isNew: false, isTrending: true },
-  { name: "Dropbox", desc: "Cloud file sharing", url: "https://www.dropbox.com/", category: "productivity", pricing: "freemium", tags: ["sharing", "cloud"], isNew: false, isTrending: false },
-  { name: "WeTransfer", desc: "Large file transfer", url: "https://wetransfer.com/", category: "misc", pricing: "freemium", tags: ["transfer", "file"], isNew: false, isTrending: true },
-  { name: "LastPass", desc: "Password manager tool", url: "https://www.lastpass.com/", category: "misc", pricing: "freemium", tags: ["password", "manager"], isNew: false, isTrending: false },
-  { name: "NordVPN", desc: "Secure VPN service", url: "https://nordvpn.com/", category: "misc", pricing: "paid", tags: ["vpn", "security"], isNew: false, isTrending: true },
-  { name: "IFTTT", desc: "Task automation tool", url: "https://ifttt.com/", category: "automation", pricing: "freemium", tags: ["automation", "tasks"], isNew: false, isTrending: true },
-  { name: "Loom", desc: "Screen recording tool", url: "https://www.loom.com/", category: "video", pricing: "freemium", tags: ["recording", "screen"], isNew: false, isTrending: true }
+  { name: "WordLift", desc: "AI for SEO and structured content on websites.", url: "https://wordlift.io", category: "automation", pricing: "paid", tags: ["seo", "content"], isNew: false, isTrending: false }
 ];
 
 // ═══════════════════════════════════════════
@@ -320,31 +216,65 @@ function renderCards() {
 
   let compareList = JSON.parse(localStorage.getItem('aihub_compare_tools')) || [];
 
-  container.innerHTML = list.map(tool => {
-    const isFav = favorites.includes(tool.name);
-    const isCompare = compareList.includes(tool.name);
-    return `
-    <div class="card" data-category="${tool.category}" data-name="${tool.name}">
-      <div class="card-badges">
-        ${pricingBadgeHTML(tool.pricing)}
-        ${statusBadgeHTML(tool)}
+  const catNames = {
+    writing: 'Writing & Chat', image: 'Image AI', video: 'Video AI', voice: 'Voice AI',
+    coding: 'Coding AI', gaming: 'Gaming AI', devotional: 'Devotional',
+    productivity: 'Productivity', editing: 'Editing AI', automation: 'Automation',
+    portfolio: 'Portfolio AI', cloning: 'Cloning AI', misc: 'Miscellaneous',
+    programming: 'Programming', design: 'Design', marketing: 'Marketing',
+    jobs: 'Jobs & Career', self_improvement: 'Self Improvement', finance: 'Finance & Money'
+  };
+  
+  const categoryOrder = Object.keys(catNames);
+
+  // Group list by category
+  const grouped = {};
+  list.forEach(tool => {
+    if (!grouped[tool.category]) grouped[tool.category] = [];
+    grouped[tool.category].push(tool);
+  });
+
+  let html = '';
+  categoryOrder.forEach(cat => {
+    if (!grouped[cat]) return;
+
+    html += `
+    <div class="category-section">
+      <div class="category-header">
+        <span>${getCategoryIcon(cat)}</span>
+        <h2 class="category-title">${catNames[cat]}</h2>
       </div>
-      <button class="fav-btn ${isFav ? 'active' : ''}" data-tool="${tool.name}" title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
-        <i class="fa${isFav ? 's' : 'r'} fa-heart"></i>
-      </button>
-      <button class="compare-btn ${isCompare ? 'active' : ''}" data-tool="${tool.name}" title="${isCompare ? 'Remove from compare' : 'Compare'}">
-        <i class="fas fa-balance-scale"></i>
-      </button>
-      <div class="card-icon">${getCategoryIcon(tool.category)}</div>
-      <h3>${tool.name}</h3>
-      <p>${tool.desc}</p>
-      ${starsHTML(tool.name)}
-      ${tagsHTML(tool.tags)}
-      <a href="${tool.url}" target="_blank" rel="noopener" class="visit-btn">
-        Visit <i class="fas fa-arrow-up-right-from-square"></i>
-      </a>
+      <div class="card-container">
+        ${grouped[cat].map(tool => {
+          const isFav = favorites.includes(tool.name);
+          const isCompare = compareList.includes(tool.name);
+          return `
+          <div class="card" data-category="${tool.category}" data-name="${tool.name}">
+            <div class="card-badges">
+              ${pricingBadgeHTML(tool.pricing)}
+              ${statusBadgeHTML(tool)}
+            </div>
+            <button class="fav-btn ${isFav ? 'active' : ''}" data-tool="${tool.name}" title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
+              <i class="fa${isFav ? 's' : 'r'} fa-heart"></i>
+            </button>
+            <button class="compare-btn ${isCompare ? 'active' : ''}" data-tool="${tool.name}" title="${isCompare ? 'Remove from compare' : 'Compare'}">
+              <i class="fas fa-balance-scale"></i>
+            </button>
+            <div class="card-icon">${getCategoryIcon(tool.category)}</div>
+            <h3>${tool.name}</h3>
+            <p>${tool.desc}</p>
+            ${starsHTML(tool.name)}
+            ${tagsHTML(tool.tags)}
+            <a href="${tool.url}" target="_blank" rel="noopener" class="visit-btn">
+              Visit <i class="fas fa-arrow-up-right-from-square"></i>
+            </a>
+          </div>`;
+        }).join('')}
+      </div>
     </div>`;
-  }).join('');
+  });
+
+  container.innerHTML = html;
 
   // Events on new cards
   container.querySelectorAll('.fav-btn').forEach(btn => {
@@ -451,8 +381,7 @@ function getCategoryIcon(cat) {
     writing: '💬', image: '🖼️', video: '🎬', voice: '🎙️',
     coding: '💻', gaming: '🎮', devotional: '🙏', productivity: '⚡',
     editing: '✨', automation: '🤖', portfolio: '💼', cloning: '👤',
-    misc: '🔮', programming: '💻', design: '🎨', marketing: '📈',
-    jobs: '👔', self_improvement: '🌱', finance: '💰'
+    misc: '🔮'
   };
   return icons[cat] || '🤖';
 }
@@ -560,31 +489,22 @@ clearSearch.addEventListener('click', () => {
   renderCards();
 });
 
-// Sidebar toggle
-const menuToggle = document.getElementById('menu-toggle');
-const sideMenu = document.getElementById('side-menu');
-const mainContent = document.getElementById('main-content');
-menuToggle.addEventListener('click', () => {
-  sideMenu.classList.toggle('open');
-  mainContent.classList.toggle('menu-open');
-});
-
-// Category links
-document.querySelectorAll('.side-menu a').forEach(link => {
-  link.addEventListener('click', e => {
-    if (!link.hasAttribute('data-category')) return;
+// Header Favorites Link
+const favLinkHeader = document.getElementById('fav-link-header');
+if (favLinkHeader) {
+  favLinkHeader.addEventListener('click', e => {
     e.preventDefault();
-    document.querySelectorAll('.side-menu a').forEach(l => l.classList.remove('active'));
-    link.classList.add('active');
-    activeCategory = link.dataset.category;
+    if (activeCategory === 'favorites') {
+      activeCategory = 'all';
+      favLinkHeader.style.color = 'var(--text)';
+    } else {
+      activeCategory = 'favorites';
+      favLinkHeader.style.color = 'var(--accent)';
+    }
     activeTag = '';
     renderCards();
-    if (window.innerWidth < 768) {
-      sideMenu.classList.remove('open');
-      mainContent.classList.remove('menu-open');
-    }
   });
-});
+}
 
 // Price filter chips
 document.querySelectorAll('.filter-chip').forEach(chip => {
@@ -602,57 +522,27 @@ document.getElementById('sortSelect').addEventListener('change', e => {
   renderCards();
 });
 
-// Close sidebar on outside click (mobile)
-document.addEventListener('click', e => {
-  if (window.innerWidth < 768 &&
-    !sideMenu.contains(e.target) &&
-    !menuToggle.contains(e.target) &&
-    sideMenu.classList.contains('open')) {
-    sideMenu.classList.remove('open');
-    mainContent.classList.remove('menu-open');
-  }
-});
-
 // ═══════════════════════════════════════════
 //  AUTH STATE UI
 // ═══════════════════════════════════════════
 function updateAuthUI() {
   const user = localStorage.getItem('aihub_user');
 
-  // Header auth button
-  const authBtn = document.getElementById('auth-btn');
-  if (authBtn) {
-    if (user) {
-      authBtn.innerHTML = '<i class="fas fa-sign-out-alt"></i> <span id="auth-btn-text">Logout</span>';
-      authBtn.href = '#';
-      authBtn.onclick = (e) => {
-        e.preventDefault();
-        localStorage.removeItem('aihub_user');
-        window.location.replace('login.html');
-      };
-    } else {
-      authBtn.innerHTML = '<i class="fas fa-user"></i> <span id="auth-btn-text">Login</span>';
-      authBtn.href = 'login.html';
-      authBtn.onclick = null;
-    }
-  }
-
-  // Sidebar nav items
+  // Header auth navigation
   const navAuthLinks = document.getElementById('nav-auth-links');
   const navLogout = document.getElementById('nav-logout');
-  const sideLogoutBtn = document.getElementById('side-logout-btn');
+  const headerLogoutBtn = document.getElementById('header-logout-btn');
 
   if (user) {
     if (navAuthLinks) navAuthLinks.style.display = 'none';
-    if (navLogout) {
-      navLogout.style.display = 'block';
-      if (sideLogoutBtn) {
-        sideLogoutBtn.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem('aihub_user');
-          window.location.replace('login.html');
-        };
-      }
+    if (navLogout) navLogout.style.display = 'flex';
+    if (headerLogoutBtn && !headerLogoutBtn.dataset.bound) {
+      headerLogoutBtn.dataset.bound = true;
+      headerLogoutBtn.addEventListener('click', e => {
+        e.preventDefault();
+        localStorage.removeItem('aihub_user');
+        window.location.replace('login.html');
+      });
     }
   } else {
     if (navAuthLinks) navAuthLinks.style.display = 'flex';
@@ -679,13 +569,13 @@ function openModal(toolName) {
   document.getElementById('modal-title').textContent = tool.name;
   document.getElementById('modal-badges').innerHTML = pricingBadgeHTML(tool.pricing) + statusBadgeHTML(tool);
   document.getElementById('modal-desc').textContent = tool.desc;
-  
-  const catNames = { writing: 'Writing', image: 'Image Gen', video: 'Video Gen', voice: 'Voice', coding: 'Coding', gaming: 'Gaming', devotional: 'Devotional', productivity: 'Productivity', editing: 'Editing', automation: 'Automation', portfolio: 'Portfolio', cloning: 'Cloning', misc: 'Misc', programming: 'Programming', design: 'Design', marketing: 'Marketing', jobs: 'Jobs & Career', self_improvement: 'Self Improvement', finance: 'Finance & Money' };
+
+  const catNames = { writing: 'Writing', image: 'Image Gen', video: 'Video Gen', voice: 'Voice', coding: 'Coding', gaming: 'Gaming', devotional: 'Devotional', productivity: 'Productivity', editing: 'Editing', automation: 'Automation', portfolio: 'Portfolio', cloning: 'Cloning', misc: 'Misc' };
   document.getElementById('modal-category').textContent = catNames[tool.category] || tool.category;
-  
+
   const priceMap = { free: 'Free', freemium: 'Freemium', paid: 'Paid' };
   document.getElementById('modal-pricing').textContent = priceMap[tool.pricing] || tool.pricing;
-  
+
   // Reuse stars renderer but we might not want to re-attach events in modal to keep it simple, just read-only or attach once
   const r = ratings[tool.name] || 0;
   let starsHtml = '';
@@ -694,10 +584,10 @@ function openModal(toolName) {
   }
   document.getElementById('modal-stars').innerHTML = starsHtml;
   document.getElementById('modal-rating-val').textContent = r > 0 ? r.toFixed(1) : '—';
-  
+
   document.getElementById('modal-tags').innerHTML = tool.tags.map(t => `<span class="tag">#${t}</span>`).join('');
   document.getElementById('modal-visit-btn').href = tool.url;
-  
+
   document.getElementById('tool-modal').classList.add('active');
 }
 
@@ -777,10 +667,10 @@ function renderSpotlight(query) {
     spotlightIndex = -1;
     return;
   }
-  
-  const filtered = tools.filter(t => 
-    t.name.toLowerCase().includes(query) || 
-    t.desc.toLowerCase().includes(query) || 
+
+  const filtered = tools.filter(t =>
+    t.name.toLowerCase().includes(query) ||
+    t.desc.toLowerCase().includes(query) ||
     t.category.toLowerCase().includes(query)
   ).slice(0, 10); // Limit to top 10
 
@@ -864,7 +754,7 @@ function appendHubbotMessage(htmlContent, className) {
 
 function processHubbotQuery(query) {
   const qStr = query.toLowerCase().trim();
-  
+
   // 1. Conversational / Small Talk
   if (['hi', 'hello', 'hey', 'greetings', 'sup'].includes(qStr)) {
     return "Hello! 👋 I'm HubBot. What kind of AI tool are you looking to discover today?";
@@ -896,7 +786,7 @@ function processHubbotQuery(query) {
 
   let matchedCategory = null;
   let isFreeSearch = false;
-  
+
   // Check against our intents map
   for (const [category, keywords] of Object.entries(intents)) {
     if (keywords.some(kw => qStr.includes(kw))) {
@@ -922,8 +812,8 @@ function processHubbotQuery(query) {
     const searchTerms = qStr.split(' ').filter(word => word.length > 2); // Ignore 'a', 'is', etc.
     if (searchTerms.length > 0) {
       matches = tools.filter(t => {
-        return searchTerms.some(term => 
-          t.name.toLowerCase().includes(term) || 
+        return searchTerms.some(term =>
+          t.name.toLowerCase().includes(term) ||
           t.desc.toLowerCase().includes(term) ||
           t.category.toLowerCase().includes(term) ||
           t.tags.some(tag => tag.toLowerCase().includes(term))
@@ -938,14 +828,14 @@ function processHubbotQuery(query) {
     matches.sort((a, b) => (ratings[b.name] || 0) - (ratings[a.name] || 0));
     const top3 = matches.slice(0, 3);
     const links = top3.map(t => `<br>• <a href="#" onclick="openModal('${t.name}'); return false;" style="color: var(--accent); font-weight: 600; text-decoration: none;">${t.name}</a> - <span style="font-size: 0.8em; color: var(--text-dim);">${t.category}</span>`).join('');
-    
+
     const responses = [
       "Here are the top tools that match what you're looking for:",
       "I've searched the database. These might be exactly what you need:",
       "Based on your request, I highly recommend checking these out:"
     ];
     const randomIntro = responses[Math.floor(Math.random() * responses.length)];
-    
+
     return `${randomIntro}${links}`;
   }
 
