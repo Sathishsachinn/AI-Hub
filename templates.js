@@ -2,103 +2,31 @@
 //  TEMPLATES DATA
 // ═══════════════════════════════════════════
 const tools = [
-  // UI Components
+
   { name: "Motion", desc: "Build stunning animated interfaces. Pre-built UI templates.", url: "https://motion.site.ai/", category: "ui", pricing: "freemium", tags: ["ui", "animation", "motion"], isNew: true, isTrending: true },
-  { name: "v0 by Vercel", desc: "Generate React UI components using AI.", url: "https://v0.dev/", category: "ui", pricing: "freemium", tags: ["react", "ui-gen", "vercel"], isNew: false, isTrending: true },
-  { name: "UIzard", desc: "AI-powered UI design tool for prototyping in minutes.", url: "https://uizard.io/", category: "ui", pricing: "freemium", tags: ["design", "prototype"], isNew: false, isTrending: false },
   { name: "Tailwind UI", desc: "Beautifully designed, expertly crafted components.", url: "https://tailwindui.com/", category: "ui", pricing: "paid", tags: ["tailwind", "css"], isNew: false, isTrending: true },
 
-  // Frontend Templates
-  { name: "Lovable", desc: "Prompt to full stack web app instantly.", url: "https://lovable.dev/", category: "frontend", pricing: "freemium", tags: ["fullstack", "react", "app-builder"], isNew: true, isTrending: true },
   { name: "Vercel Templates", desc: "Jumpstart your app development with pre-built solutions.", url: "https://vercel.com/templates", category: "frontend", pricing: "free", tags: ["nextjs", "react"], isNew: false, isTrending: true },
   { name: "Create React App", desc: "Set up a modern web app by running one command.", url: "https://create-react-app.dev/", category: "frontend", pricing: "free", tags: ["react", "boilerplate"], isNew: false, isTrending: false },
-  { name: "Bolt.new", desc: "In-browser web development powered by AI.", url: "https://bolt.new/", category: "frontend", pricing: "freemium", tags: ["web-builder", "ai-assist"], isNew: true, isTrending: true },
 
-  // Backend Boilerplates
   { name: "Supabase", desc: "Open source Firebase alternative with auto-generated APIs.", url: "https://supabase.com/", category: "backend", pricing: "freemium", tags: ["backend", "postgres", "auth"], isNew: false, isTrending: true },
   { name: "Appwrite", desc: "Secure open-source backend server for Web, Mobile & Flutter.", url: "https://appwrite.io/", category: "backend", pricing: "free", tags: ["backend", "open-source"], isNew: false, isTrending: false },
   { name: "NestJS Boilerplate", desc: "A progressive Node.js framework for building efficient server-side apps.", url: "https://nestjs.com/", category: "backend", pricing: "free", tags: ["nodejs", "typescript"], isNew: false, isTrending: false },
   
-  // Database Schemas
+
   { name: "Prisma", desc: "Next-generation Node.js and TypeScript ORM.", url: "https://www.prisma.io/", category: "database", pricing: "free", tags: ["orm", "database"], isNew: false, isTrending: true },
   { name: "PlanetScale", desc: "The world's most advanced serverless MySQL platform.", url: "https://planetscale.com/", category: "database", pricing: "freemium", tags: ["mysql", "serverless"], isNew: false, isTrending: false },
   { name: "Neon", desc: "Serverless Postgres built for developers.", url: "https://neon.tech/", category: "database", pricing: "freemium", tags: ["postgres", "serverless"], isNew: false, isTrending: true },
 
-  // Automation
+
   { name: "n8n", desc: "Fair-code workflow automation tool.", url: "https://n8n.io/", category: "automation", pricing: "freemium", tags: ["workflow", "automation"], isNew: false, isTrending: true },
   { name: "Make", desc: "Design, build, and automate anything.", url: "https://www.make.com/en", category: "automation", pricing: "freemium", tags: ["no-code", "automation"], isNew: false, isTrending: false },
   { name: "Axiom browser automation", desc: "Browser automation without code.", url: "https://axiom.ai/", category: "automation", pricing: "freemium", tags: ["browser", "bot"], isNew: false, isTrending: false },
 
-  // Misc
+
   { name: "Framer", desc: "Design and ship your dream site. Zero code, maximum speed.", url: "https://www.framer.com/", category: "misc", pricing: "freemium", tags: ["website", "design"], isNew: false, isTrending: true },
   { name: "Webflow", desc: "Create, collaborate, and scale beautiful websites.", url: "https://webflow.com/", category: "misc", pricing: "freemium", tags: ["website", "cms"], isNew: false, isTrending: false },
 
-  // AI UI Generation
-  { name: "Galileo AI", desc: "High-fidelity UI designs from text prompts.", url: "https://www.usegalileo.ai", category: "ui", pricing: "freemium", tags: ["design", "ui-gen"], isNew: false, isTrending: true },
-  { name: "Subframe", desc: "Clean, production-ready AI UI components and systems.", url: "https://www.subframe.com", category: "ui", pricing: "freemium", tags: ["components", "system"], isNew: false, isTrending: false },
-  { name: "Magic Patterns", desc: "AI design system and component generator.", url: "https://magicpatterns.com", category: "ui", pricing: "freemium", tags: ["design-system", "components"], isNew: false, isTrending: false },
-  { name: "Komposo", desc: "Text or image to maintainable, framework-flexible UI code.", url: "https://www.komposo.ai", category: "ui", pricing: "freemium", tags: ["ui-code", "frameworks"], isNew: true, isTrending: false },
-  { name: "Dyad", desc: "Open-source/local v0-style UI generator.", url: "https://dyad.sh", category: "ui", pricing: "free", tags: ["open-source", "ui-gen"], isNew: true, isTrending: false },
-  { name: "Figma Make", desc: "Prompt to responsive interactive websites inside Figma.", url: "https://www.figma.com/solutions/ai-website-builder", category: "ui", pricing: "freemium", tags: ["figma", "design"], isNew: false, isTrending: true },
-  { name: "Canva AI Code", desc: "Text prompts to interactive website elements/widgets.", url: "https://www.canva.com/ai-code-generator", category: "ui", pricing: "freemium", tags: ["canva", "widgets"], isNew: false, isTrending: false },
-  { name: "Locofy", desc: "Figma/Sketch designs to production frontend code.", url: "https://www.locofy.ai", category: "ui", pricing: "free", tags: ["figma-to-code", "react"], isNew: false, isTrending: true },
-  { name: "Relume", desc: "AI sitemaps, wireframes, and component library.", url: "https://www.relume.io", category: "ui", pricing: "freemium", tags: ["webflow", "wireframes"], isNew: false, isTrending: true },
-  { name: "Flowstep", desc: "Conversational prompts to complete product UI experiences.", url: "https://flowstep.ai", category: "ui", pricing: "freemium", tags: ["ui-gen", "conversation"], isNew: false, isTrending: false },
-  { name: "Google Stitch", desc: "Text/sketches to high-fidelity UI and code (experimental).", url: "https://labs.google", category: "ui", pricing: "free", tags: ["experimental", "google"], isNew: true, isTrending: false },
-  { name: "ProtoPie", desc: "Advanced interactive prototypes with AI support.", url: "https://www.protopie.io", category: "ui", pricing: "freemium", tags: ["prototype", "interaction"], isNew: false, isTrending: false },
-  { name: "Moonchild AI", desc: "Intent-based UI and logic orchestration for prototypes.", url: "https://moonchild.ai", category: "ui", pricing: "freemium", tags: ["ui", "logic"], isNew: true, isTrending: false },
-  { name: "Banani", desc: "Prompt/image to high-fidelity designs or HTML/CSS exports.", url: "https://www.banani.co", category: "ui", pricing: "freemium", tags: ["html", "css"], isNew: false, isTrending: false },
-  { name: "Motiff", desc: "AI UI generator for production-ready interfaces.", url: "https://www.motiff.com", category: "ui", pricing: "freemium", tags: ["ui-gen", "figma"], isNew: false, isTrending: false },
-  { name: "Kombai", desc: "Design-to-code with high-fidelity Figma conversions.", url: "https://kombai.com", category: "ui", pricing: "freemium", tags: ["figma-to-code"], isNew: false, isTrending: false },
-  { name: "AIDesigner", desc: "Premium UI generation with strong visual quality.", url: "https://www.aidesigner.ai", category: "ui", pricing: "freemium", tags: ["ui-gen"], isNew: false, isTrending: false },
-  { name: "Supafine", desc: "AI-powered React UI component builder.", url: "https://supafine.ai", category: "ui", pricing: "freemium", tags: ["react", "components"], isNew: true, isTrending: false },
-  { name: "Fine", desc: "Clean UI generation with focus on speed and simplicity.", url: "https://fine.dev", category: "ui", pricing: "freemium", tags: ["ui-gen"], isNew: false, isTrending: false },
-  { name: "Morph", desc: "Innovative UI component tool for modern stacks.", url: "https://morph.dev", category: "ui", pricing: "freemium", tags: ["components", "modern"], isNew: false, isTrending: false },
-  { name: "Anima", desc: "Design-to-production code (Figma to React/HTML).", url: "https://www.animaapp.com", category: "ui", pricing: "freemium", tags: ["figma-to-code", "react"], isNew: false, isTrending: true },
-  { name: "Unicorn Studio", desc: "AI for adding 3D effects and interactive elements.", url: "https://unicorn.studio", category: "ui", pricing: "freemium", tags: ["3d", "interactive"], isNew: false, isTrending: false },
-  { name: "Aura Build", desc: "New AI design tool for modern web prototypes.", url: "https://aurabuild.com", category: "ui", pricing: "freemium", tags: ["ui-gen", "modern"], isNew: true, isTrending: false },
-  { name: "CopilotKit", desc: "Framework for building AI-powered user interfaces.", url: "https://copilotkit.ai", category: "ui", pricing: "freemium", tags: ["framework", "components"], isNew: false, isTrending: false },
-
-  // AI Frontend / App Builders
-  { name: "Base44", desc: "Fast prompt-to-app for internal tools and MVPs.", url: "https://base44.com", category: "frontend", pricing: "paid", tags: ["mvp", "internal-tools"], isNew: false, isTrending: false },
-  { name: "Emergent", desc: "Full-stack product development from prompts.", url: "https://emergent.sh", category: "frontend", pricing: "paid", tags: ["product-dev", "fullstack"], isNew: false, isTrending: false },
-  { name: "NxCode", desc: "Dual-agent system for building web apps & MVPs.", url: "https://www.nxcode.io", category: "frontend", pricing: "paid", tags: ["agents", "mvp"], isNew: false, isTrending: false },
-  { name: "Builder.io", desc: "Visual AI-powered development and CMS.", url: "https://www.builder.io", category: "frontend", pricing: "freemium", tags: ["visual-builder", "cms"], isNew: false, isTrending: true },
-  { name: "Softr", desc: "No-code apps on Airtable with AI features.", url: "https://softr.io", category: "frontend", pricing: "freemium", tags: ["no-code", "airtable"], isNew: false, isTrending: false },
-  { name: "Bubble", desc: "Visual web app builder with AI assistance.", url: "https://bubble.io", category: "frontend", pricing: "freemium", tags: ["no-code", "visual"], isNew: false, isTrending: true },
-  { name: "PlayCode", desc: "AI web design and coding playground.", url: "https://playcode.io", category: "frontend", pricing: "free", tags: ["playground", "sandbox"], isNew: false, isTrending: false },
-  { name: "LUMI.new", desc: "AI app builder focused on quick SaaS and web apps.", url: "https://lumi.new", category: "frontend", pricing: "freemium", tags: ["saas", "app-builder"], isNew: true, isTrending: false },
-  { name: "Reflex.build", desc: "Python-based AI app builder for cross-functional teams.", url: "https://reflex.dev", category: "frontend", pricing: "freemium", tags: ["python", "app-builder"], isNew: false, isTrending: false },
-  { name: "Rork", desc: "Emerging AI app builder for rapid development.", url: "https://rork.ai", category: "frontend", pricing: "freemium", tags: ["app-builder", "rapid"], isNew: true, isTrending: false },
-  { name: "UI Bakery", desc: "Prompt-to-full-stack with low-code flexibility.", url: "https://uibakery.io", category: "frontend", pricing: "freemium", tags: ["low-code", "fullstack"], isNew: false, isTrending: false },
-
-  // AI Backend / CMS
-  { name: "Hygraph", desc: "Headless CMS with strong AI/content tools.", url: "https://hygraph.com", category: "backend", pricing: "freemium", tags: ["cms", "headless"], isNew: false, isTrending: false },
-  { name: "Sanity", desc: "AI-enhanced content platform for modern websites.", url: "https://www.sanity.io", category: "backend", pricing: "freemium", tags: ["cms", "platform"], isNew: false, isTrending: false },
-  { name: "Contentful", desc: "Enterprise headless CMS with AI integrations.", url: "https://www.contentful.com", category: "backend", pricing: "paid", tags: ["enterprise", "cms"], isNew: false, isTrending: false },
-  { name: "Firebase + Gen AI", desc: "Backend + AI for rapid web apps.", url: "https://firebase.google.com", category: "backend", pricing: "freemium", tags: ["firebase", "backend-as-a-service"], isNew: false, isTrending: false },
-
-  // AI Website Builders (Misc)
-  { name: "Wix AI", desc: "Chat a few questions to full custom website.", url: "https://www.wix.com/ai-website-builder", category: "misc", pricing: "freemium", tags: ["website-builder", "no-code"], isNew: false, isTrending: true },
-  { name: "Hostinger AI", desc: "Quick 4-click or prompt-based sites with hosting.", url: "https://www.hostinger.com/ai-website-builder", category: "misc", pricing: "paid", tags: ["hosting", "website-builder"], isNew: false, isTrending: false },
-  { name: "Durable", desc: "AI builds complete business websites fast.", url: "https://durable.co", category: "misc", pricing: "paid", tags: ["business", "website-builder"], isNew: false, isTrending: true },
-  { name: "Dorik", desc: "AI-powered no-code website creator.", url: "https://dorik.com", category: "misc", pricing: "freemium", tags: ["no-code", "website-builder"], isNew: false, isTrending: false },
-  { name: "Duda", desc: "AI website builder for agencies.", url: "https://www.duda.co", category: "misc", pricing: "paid", tags: ["agencies", "website-builder"], isNew: false, isTrending: false },
-  { name: "CodeDesign.ai", desc: "AI companion for generating and editing websites via chat.", url: "https://codedesign.ai", category: "misc", pricing: "freemium", tags: ["chat", "website-builder"], isNew: false, isTrending: false },
-  { name: "Bookipi", desc: "Simple AI website builder.", url: "https://bookipi.com", category: "misc", pricing: "freemium", tags: ["simple", "website-builder"], isNew: false, isTrending: false },
-  { name: "GoDaddy AI", desc: "AI site builder with e-commerce focus.", url: "https://www.godaddy.com/ai-website-builder", category: "misc", pricing: "paid", tags: ["ecommerce", "website-builder"], isNew: false, isTrending: false },
-  { name: "Wegic", desc: "AI website builder that creates sites in seconds with guided assistance.", url: "https://wegic.ai", category: "misc", pricing: "freemium", tags: ["guided", "website-builder"], isNew: false, isTrending: false },
-  { name: "LandingHero.ai", desc: "Fast AI website builder for landing pages and SaaS sites.", url: "https://www.landinghero.ai", category: "misc", pricing: "freemium", tags: ["landing-page", "saas"], isNew: true, isTrending: false },
-  { name: "Skywork", desc: "Quick AI-powered site and app builder.", url: "https://skywork.ai", category: "misc", pricing: "freemium", tags: ["app-builder", "website-builder"], isNew: false, isTrending: false },
-  { name: "Neo Sites", desc: "Simple, smart AI builder for everyday business sites.", url: "https://neosites.com", category: "misc", pricing: "freemium", tags: ["business", "website-builder"], isNew: false, isTrending: false },
-  { name: "Olitt", desc: "AI website creator with global appeal and quick setup.", url: "https://olitt.com", category: "misc", pricing: "free", tags: ["quick-setup", "website-builder"], isNew: false, isTrending: false },
-  { name: "Tithely Sites", desc: "AI-powered sites tailored for organizations/churches.", url: "https://tithely.com", category: "misc", pricing: "paid", tags: ["churches", "organizations"], isNew: false, isTrending: false },
-  { name: "Design.com", desc: "AI website builder with design-focused features.", url: "https://design.com", category: "misc", pricing: "freemium", tags: ["design", "website-builder"], isNew: false, isTrending: false },
-  { name: "Squarespace AI", desc: "AI-assisted professional site building.", url: "https://www.squarespace.com/ai-website-builder", category: "misc", pricing: "paid", tags: ["professional", "website-builder"], isNew: false, isTrending: false },
-  { name: "IONOS AI", desc: "Budget-friendly AI site creation with hosting.", url: "https://www.ionos.com/ai-website-builder", category: "misc", pricing: "paid", tags: ["hosting", "budget"], isNew: false, isTrending: false },
-  { name: "DreamHost AI", desc: "AI-powered sites with strong hosting integration.", url: "https://www.dreamhost.com/ai-website-builder", category: "misc", pricing: "paid", tags: ["hosting", "website-builder"], isNew: false, isTrending: false },
-  { name: "Mobirise", desc: "Offline-friendly AI website builder.", url: "https://mobirise.com", category: "misc", pricing: "free", tags: ["offline", "windows"], isNew: false, isTrending: false },
-  { name: "Webstudio", desc: "Pro designer’s AI/no-code tool for custom sites.", url: "https://webstudio.is", category: "misc", pricing: "freemium", tags: ["designer", "no-code"], isNew: false, isTrending: false }
 ];
 
 // ═══════════════════════════════════════════
@@ -181,6 +109,21 @@ function tagsHTML(tags) {
   return `<div class="tag-list">${tags.slice(0, 3).map(t => `<span class="tag" data-tag="${t}">#${t}</span>`).join('')}</div>`;
 }
 
+
+
+function categoryBadgeHTML(cat, toolName) {
+  const standardNames = {
+    ui: 'UI Component',
+    frontend: 'Frontend Template',
+    backend: 'Backend Boilerplate',
+    database: 'Database Schema',
+    automation: 'Automation',
+    misc: 'Miscellaneous'
+  };
+  const displayName = standardNames[cat] || cat;
+  return `<span class="badge badge-category">${displayName}</span>`;
+}
+
 function renderCards() {
   const container = document.getElementById('cards');
   const noResults = document.getElementById('no-results');
@@ -209,6 +152,7 @@ function renderCards() {
       <div class="card-badges">
         ${pricingBadgeHTML(tool.pricing)}
         ${statusBadgeHTML(tool)}
+        ${categoryBadgeHTML(tool.category, tool.name)}
       </div>
       <button class="fav-btn ${isFav ? 'active' : ''}" data-tool="${tool.name}" title="${isFav ? 'Remove from favorites' : 'Add to favorites'}">
         <i class="fa${isFav ? 's' : 'r'} fa-heart"></i>
@@ -492,59 +436,11 @@ document.addEventListener('click', e => {
 });
 
 // ═══════════════════════════════════════════
-//  AUTH STATE UI
-// ═══════════════════════════════════════════
-function updateAuthUI() {
-  const user = localStorage.getItem('aihub_user');
-
-  // Header auth button
-  const authBtn = document.getElementById('auth-btn');
-  if (authBtn) {
-    if (user) {
-      authBtn.innerHTML = '<i class="fas fa-sign-out-alt"></i> <span id="auth-btn-text">Logout</span>';
-      authBtn.href = '#';
-      authBtn.onclick = (e) => {
-        e.preventDefault();
-        localStorage.removeItem('aihub_user');
-        window.location.replace('login.html');
-      };
-    } else {
-      authBtn.innerHTML = '<i class="fas fa-user"></i> <span id="auth-btn-text">Login</span>';
-      authBtn.href = 'login.html';
-      authBtn.onclick = null;
-    }
-  }
-
-  // Sidebar nav items
-  const navAuthLinks = document.getElementById('nav-auth-links');
-  const navLogout = document.getElementById('nav-logout');
-  const sideLogoutBtn = document.getElementById('side-logout-btn');
-
-  if (user) {
-    if (navAuthLinks) navAuthLinks.style.display = 'none';
-    if (navLogout) {
-      navLogout.style.display = 'block';
-      if (sideLogoutBtn) {
-        sideLogoutBtn.onclick = (e) => {
-          e.preventDefault();
-          localStorage.removeItem('aihub_user');
-          window.location.replace('login.html');
-        };
-      }
-    }
-  } else {
-    if (navAuthLinks) navAuthLinks.style.display = 'flex';
-    if (navLogout) navLogout.style.display = 'none';
-  }
-}
-
-// ═══════════════════════════════════════════
 //  INIT
 // ═══════════════════════════════════════════
 if (document.getElementById('cards')) {
   renderCards();
   updateFavCount();
-  updateAuthUI();
 }
 
 // ═══════════════════════════════════════════
@@ -558,8 +454,16 @@ function openModal(toolName) {
   document.getElementById('modal-badges').innerHTML = pricingBadgeHTML(tool.pricing) + statusBadgeHTML(tool);
   document.getElementById('modal-desc').textContent = tool.desc;
   
-  const catNames = { ui: 'UI Elements', frontend: 'Frontend App', backend: 'Backend', database: 'Database', automation: 'Automation', misc: 'Misc' };
-  document.getElementById('modal-category').textContent = catNames[tool.category] || tool.category;
+  const standardNames = {
+    ui: 'UI Component',
+    frontend: 'Frontend Template',
+    backend: 'Backend Boilerplate',
+    database: 'Database Schema',
+    automation: 'Automation',
+    misc: 'Miscellaneous'
+  };
+  const displayName = standardNames[tool.category] || tool.category;
+  document.getElementById('modal-category').textContent = displayName;
   
   const priceMap = { free: 'Free', freemium: 'Freemium', paid: 'Paid' };
   document.getElementById('modal-pricing').textContent = priceMap[tool.pricing] || tool.pricing;
@@ -690,137 +594,4 @@ function renderSpotlight(query) {
   });
 }
 
-// ═══════════════════════════════════════════
-//  HUBBOT AI
-// ═══════════════════════════════════════════
-const hubbotBtn = document.getElementById('hubbot-btn');
-const hubbotWindow = document.getElementById('hubbot-window');
-const hubbotClose = document.getElementById('hubbot-close');
-const hubbotSend = document.getElementById('hubbot-send');
-const hubbotInput = document.getElementById('hubbot-input');
-const hubbotMessages = document.getElementById('hubbot-messages');
 
-if (hubbotBtn && hubbotWindow) {
-  hubbotBtn.addEventListener('click', () => {
-    hubbotWindow.classList.add('active');
-    hubbotInput.focus();
-  });
-
-  hubbotClose.addEventListener('click', () => {
-    hubbotWindow.classList.remove('active');
-  });
-
-  hubbotSend.addEventListener('click', handleHubbotSend);
-  hubbotInput.addEventListener('keydown', e => {
-    if (e.key === 'Enter') handleHubbotSend();
-  });
-}
-
-function handleHubbotSend() {
-  const text = hubbotInput.value.trim();
-  if (!text) return;
-
-  // Add User Message
-  appendHubbotMessage(text, 'user-msg');
-  hubbotInput.value = '';
-
-  // Simulate AI Thinking
-  setTimeout(() => {
-    const response = processHubbotQuery(text);
-    appendHubbotMessage(response, 'bot-msg');
-  }, 600);
-}
-
-function appendHubbotMessage(htmlContent, className) {
-  const msg = document.createElement('div');
-  msg.className = className;
-  msg.innerHTML = htmlContent;
-  hubbotMessages.appendChild(msg);
-  hubbotMessages.scrollTop = hubbotMessages.scrollHeight;
-}
-
-function processHubbotQuery(query) {
-  const qStr = query.toLowerCase().trim();
-  
-  // 1. Conversational / Small Talk
-  if (['hi', 'hello', 'hey', 'greetings', 'sup'].includes(qStr)) {
-    return "Hello! 👋 I'm HubBot. What kind of AI template are you looking to discover today?";
-  }
-  if (qStr.includes('how are you')) {
-    return "I'm just a few lines of code, but I'm feeling incredibly helpful today! What can I find for you?";
-  }
-  if (qStr.includes('who are you') || qStr.includes('what are you')) {
-    return "I am HubBot, your personal AI directory assistant. Tell me what you want to build or do, and I'll recommend the best AI templates for the job!";
-  }
-  if (qStr.includes('thank you') || qStr.includes('thanks')) {
-    return "You're very welcome! Let me know if you need anything else. 🚀";
-  }
-  if (qStr.includes('bye') || qStr.includes('goodbye')) {
-    return "Goodbye! Keep innovating! ✨";
-  }
-
-  // 2. Keyword Mapping Logic
-  const intents = {
-    ui: ['ui', 'frontend', 'react', 'vue', 'component', 'interface', 'design'],
-    backend: ['backend', 'server', 'api', 'express', 'node', 'django', 'python'],
-    database: ['database', 'sql', 'postgres', 'mongo', 'data', 'storage', 'prisma'],
-    automation: ['automation', 'workflow', 'cron', 'task', 'trigger', 'ci/cd', 'deploy'],
-    free: ['free', 'zero cost', 'no money', 'unpaid', 'open source']
-  };
-
-  let matchedCategory = null;
-  let isFreeSearch = false;
-  
-  for (const [category, keywords] of Object.entries(intents)) {
-    if (keywords.some(kw => qStr.includes(kw))) {
-      if (category === 'free') {
-        isFreeSearch = true;
-      } else {
-        matchedCategory = category;
-      }
-    }
-  }
-
-  let matches = [];
-
-  // Filter based on matched logical category
-  if (matchedCategory || isFreeSearch) {
-    matches = tools.filter(t => {
-      const catMatch = matchedCategory ? (t.category === matchedCategory || t.desc.toLowerCase().includes(matchedCategory)) : true;
-      const priceMatch = isFreeSearch ? (t.pricing === 'free') : true;
-      return catMatch && priceMatch;
-    });
-  } else {
-    // 3. Fallback to broad fuzzy matching
-    const searchTerms = qStr.split(' ').filter(word => word.length > 2);
-    if (searchTerms.length > 0) {
-      matches = tools.filter(t => {
-        return searchTerms.some(term => 
-          t.name.toLowerCase().includes(term) || 
-          t.desc.toLowerCase().includes(term) ||
-          t.category.toLowerCase().includes(term) ||
-          t.tags.some(tag => tag.toLowerCase().includes(term))
-        );
-      });
-    }
-  }
-
-  // 4. Format Output
-  if (matches.length > 0) {
-    matches.sort((a, b) => (ratings[b.name] || 0) - (ratings[a.name] || 0));
-    const top3 = matches.slice(0, 3);
-    const links = top3.map(t => `<br>• <a href="#" onclick="openModal('${t.name}'); return false;" style="color: var(--accent); font-weight: 600; text-decoration: none;">${t.name}</a> - <span style="font-size: 0.8em; color: var(--text-dim);">${t.category}</span>`).join('');
-    
-    const responses = [
-      "Here are the top templates that match what you're looking for:",
-      "I've searched the database. These might be exactly what you need:",
-      "Based on your request, I highly recommend checking these out:"
-    ];
-    const randomIntro = responses[Math.floor(Math.random() * responses.length)];
-    
-    return `${randomIntro}${links}`;
-  }
-
-  // 5. Final Fallback
-  return "I couldn't find an exact match for that! Could you try describing what you want to do differently? (e.g., 'ui components' or 'api integrations')";
-}

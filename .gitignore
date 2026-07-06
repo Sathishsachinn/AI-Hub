@@ -1,0 +1,5 @@
+.cursor/
+.vscode/
+.antigravity/
+.gemini/
+*.log

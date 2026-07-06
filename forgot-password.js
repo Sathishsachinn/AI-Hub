@@ -45,8 +45,8 @@ if (forgotForm) {
 
     if (foundUser) {
       showToast(`We've sent a password reset link to ${contact}.`);
-      // Simulate sending and return to login page
-      setTimeout(() => { window.location.href = 'login.html'; }, 2500);
+      // Simulate sending and return to the homepage
+      setTimeout(() => { window.location.href = 'index.html'; }, 2500);
     } else {
       showToast('No account found with that email or phone number.');
     }

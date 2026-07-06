@@ -75,8 +75,11 @@ document.addEventListener('DOMContentLoaded', () => {
       const priceDisplay = priceMap[tool.pricing] || tool.pricing;
       
       const catNamesTools = { writing: 'Chat / Writing', image: 'Image Gen', video: 'Video Gen', voice: 'Voice', coding: 'Coding', gaming: 'Gaming AI', devotional: 'Devotional', productivity: 'Productivity', editing: 'Photo Editing', automation: 'Automation', portfolio: 'Portfolio', cloning: 'Cloning', misc: 'Misc' };
-      const catNamesTemplates = { ui: 'UI Elements', frontend: 'Frontend App', backend: 'Backend', database: 'Database', automation: 'Automation', misc: 'Misc' };
-      const displayCat = type === 'templates' ? catNamesTemplates[tool.category] : catNamesTools[tool.category];
+      const catNamesTemplatesStandard = { ui: 'UI Component', frontend: 'Frontend Template', backend: 'Backend Boilerplate', database: 'Database Schema', automation: 'Automation', misc: 'Miscellaneous' };
+      
+      const displayCat = type === 'templates' 
+        ? catNamesTemplatesStandard[tool.category] 
+        : catNamesTools[tool.category];
       const categoryIcon = typeof getCategoryIcon === 'function' ? getCategoryIcon(tool.category) : '';
 
       return `

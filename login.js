@@ -66,36 +66,69 @@ if (signupLink) {
 
 const googleLogin = document.getElementById('google-login');
 if (googleLogin) {
-  googleLogin.addEventListener('click', () => {
-    const email = prompt("Simulating OAuth: Enter your Google Email to log in:");
-    if (email && email.trim() !== '') {
-      showToast('Connecting to Google...');
-      setTimeout(() => { 
-        localStorage.setItem('aihub_user', email.trim()); 
-        window.location.href = 'index.html'; 
-      }, 1000);
-    }
+  googleLogin.addEventListener('click', async () => {
+    await signInWithProvider('google');
   });
 }
 
 const githubLogin = document.getElementById('github-login');
 if (githubLogin) {
-  githubLogin.addEventListener('click', () => {
-    const username = prompt("Simulating OAuth: Enter your GitHub Username to log in:");
-    if (username && username.trim() !== '') {
-      showToast('Connecting to GitHub...');
-      setTimeout(() => { 
-        localStorage.setItem('aihub_user', username.trim()); 
-        window.location.href = 'index.html'; 
-      }, 1000);
-    }
+  githubLogin.addEventListener('click', async () => {
+    await signInWithProvider('github');
   });
 }
 
-// Fake Auth Logic
+async function signInWithProvider(providerName) {
+  if (!window.AIHubAuth || !window.AIHubAuth.enabled || !window.AIHubAuth.auth || !window.firebase) {
+    showToast('Firebase is not configured. Please update firebase-config.js.');
+    return;
+  }
+
+  const provider = providerName === 'google'
+    ? new firebase.auth.GoogleAuthProvider()
+    : new firebase.auth.GithubAuthProvider();
+
+  if (providerName === 'github') {
+    provider.addScope('user:email');
+  }
+
+  try {
+    showToast(`Connecting to ${providerName === 'google' ? 'Google' : 'GitHub'}...`);
+    const result = await window.AIHubAuth.auth.signInWithPopup(provider);
+    const user = result.user;
+    try {
+      await window.AIHubAuth.upsertUserProfile(user.uid, {
+        name: user.displayName || '',
+        email: user.email || '',
+        provider: providerName,
+        photoURL: user.photoURL || '',
+        lastLoginAt: new Date().toISOString()
+      });
+    } catch (dbErr) {
+      console.error('OAuth profile sync error:', dbErr);
+      showToast(`Logged in, but DB sync failed (${dbErr.code || 'unknown'}).`);
+    }
+    localStorage.setItem('aihub_user', user.email || user.uid);
+    showToast('Login successful!');
+    setTimeout(() => { window.location.href = 'index.html'; }, 700);
+  } catch (err) {
+    console.error(`${providerName} OAuth error:`, err);
+    if (err.code === 'auth/popup-closed-by-user') {
+      showToast('Login popup was closed.');
+    } else if (err.code === 'auth/operation-not-allowed') {
+      showToast(`Enable ${providerName === 'google' ? 'Google' : 'GitHub'} provider in Firebase.`);
+    } else if (err.code === 'auth/unauthorized-domain') {
+      showToast('Add this domain in Firebase Authorized domains.');
+    } else {
+      showToast(`${providerName === 'google' ? 'Google' : 'GitHub'} login failed (${err.code || 'unknown'}).`);
+    }
+  }
+}
+
+// Firebase Auth Logic
 const loginForm = document.getElementById('login-form');
 if (loginForm) {
-  loginForm.addEventListener('submit', (e) => {
+  loginForm.addEventListener('submit', async (e) => {
     e.preventDefault();
     const email = document.getElementById('email').value.trim();
     const password = document.getElementById('password').value;
@@ -105,14 +138,42 @@ if (loginForm) {
       return;
     }
 
-    let users = JSON.parse(localStorage.getItem('aihub_users') || '{}');
+    if (!window.AIHubAuth || !window.AIHubAuth.enabled || !window.AIHubAuth.auth) {
+      showToast('Firebase is not configured. Please update firebase-config.js.');
+      return;
+    }
 
-    if (users[email] && users[email].password === password) {
-      localStorage.setItem('aihub_user', email);
+    try {
+      const cred = await window.AIHubAuth.auth.signInWithEmailAndPassword(email, password);
+      try {
+        await window.AIHubAuth.upsertUserProfile(cred.user.uid, {
+          email: cred.user.email || email,
+          lastLoginAt: new Date().toISOString()
+        });
+      } catch (dbErr) {
+        console.error('Email login profile sync error:', dbErr);
+        showToast(`Login ok, DB sync failed (${dbErr.code || 'unknown'}).`);
+      }
+      localStorage.setItem('aihub_user', cred.user.email || email);
       showToast('Login successful!');
-      setTimeout(() => { window.location.href = 'index.html'; }, 1000);
-    } else {
-      showToast('Invalid email or password.');
+      setTimeout(() => { window.location.href = 'index.html'; }, 700);
+    } catch (err) {
+      console.error('Email login error:', err);
+      if (err.code === 'auth/user-not-found' || err.code === 'auth/wrong-password' || err.code === 'auth/invalid-credential') {
+        showToast('Invalid email or password.');
+      } else if (err.code === 'auth/operation-not-allowed') {
+        showToast('Enable Email/Password in Firebase Authentication.');
+      } else if (err.code === 'auth/too-many-requests') {
+        showToast('Too many attempts. Please try again later.');
+      } else if (err.code === 'auth/network-request-failed') {
+        showToast('Network error. Check internet and try again.');
+      } else if (err.code === 'auth/invalid-email') {
+        showToast('Please enter a valid email address.');
+      } else if (err.code === 'auth/unauthorized-domain') {
+        showToast('Add this domain in Firebase Authorized domains.');
+      } else {
+        showToast(`Login failed (${err.code || 'unknown'}).`);
+      }
     }
   });
 }

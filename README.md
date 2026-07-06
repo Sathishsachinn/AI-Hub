@@ -10,7 +10,7 @@ This project is divided into two equally powerful sections that run side-by-side
 
 ## Key Features
 
-* **Dual Environment Navigation**: Seamlessly jump between the Tools Hub and Templates Hub via the header buttons (complete with a "NEW" badge) or the sidebar navigation.
+* **Integrated Navigation**: Access the Templates Hub directly through its dedicated tool card within the AI Tools directory.
 * **Complex Filtering Engine**: Filter items by specific categories, tags, or pricing (Free, Freemium, Paid).
 * **Live Search & Sort**: Instantly search for tools/templates by name or description. Sort items Alphabetically, by Top Rated, or Newest.
 * **Persistent State**: Favorites and 5-Star Ratings are saved directly to your browser's local storage. Tool saves and Template saves are independent of each other!
